@@ -36,7 +36,7 @@
     a { color: inherit; }
 
     .container {
-      width: min(1100px, 92vw);
+      width: min(1000px, 92vw);
       margin: 0 auto;
     }
 
@@ -84,16 +84,16 @@
 
     .nav-links a:hover { color: var(--accent); }
 
-    section { padding: 4.8rem 0; }
+    section { padding: 5.6rem 0; }
 
     .section-header {
-      max-width: 70ch;
-      margin-bottom: 1.4rem;
+      max-width: 72ch;
+      margin-bottom: 1.8rem;
     }
 
     .hero {
-      padding-top: 5rem;
-      padding-bottom: 3.1rem;
+      padding-top: 5.3rem;
+      padding-bottom: 3.7rem;
     }
 
     .hero-grid {
@@ -208,7 +208,7 @@
     }
 
     h2 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
       letter-spacing: -0.02em;
       margin-bottom: 0.95rem;
     }
@@ -254,8 +254,8 @@
 
     .method-grid {
       display: grid;
-      gap: 0.8rem;
-      margin-top: 1.4rem;
+      gap: 1rem;
+      margin-top: 1.65rem;
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -263,21 +263,23 @@
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 0.95rem;
+      padding: 1.1rem;
+      box-shadow: 0 1px 0 rgba(12, 18, 28, 0.04);
     }
 
-    .method-item strong {
-      display: block;
-      font-size: 0.93rem;
-      margin-bottom: 0.2rem;
+    .method-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
       color: #1f2a3d;
+      line-height: 1.35;
+      text-transform: lowercase;
     }
 
-    .method-item span {
-      display: block;
+    .method-item p {
+      margin: 0;
       color: #4c566b;
-      font-size: 0.87rem;
-      line-height: 1.45;
+      font-size: 0.91rem;
+      line-height: 1.52;
     }
 
     .highlights-list {
@@ -344,9 +346,10 @@
     }
 
     .highlights-group-title {
-      margin-top: 2rem;
-      margin-bottom: 0.25rem;
-      font-size: 1.06rem;
+      margin-top: 2.2rem;
+      margin-bottom: 0.4rem;
+      font-size: 1.14rem;
+      letter-spacing: -0.01em;
     }
 
     .earlier-work {
@@ -519,7 +522,7 @@
         padding: 0.7rem 0;
       }
       .nav-links { gap: 0.85rem; }
-      section { padding: 3.3rem 0; }
+      section { padding: 3.8rem 0; }
       .hero { padding-top: 3.6rem; }
       .calm-block { padding: 1.3rem; }
       .profiles-shell { padding: 1.15rem; }
@@ -539,7 +542,7 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#research">Research</a></li>
-          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#highlights">Selected research</a></li>
           <li><a href="#profiles">Profiles</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -553,10 +556,10 @@
         <div>
           <p class="eyebrow">Research portfolio</p>
           <h1>Giovanni Nicolazzo</h1>
-          <p class="headline">Researcher on criminal infiltration, sanctions circumvention, and ownership structures</p>
+          <p class="headline">Criminology and AML research on criminal infiltration, beneficial ownership, and sanctions circumvention</p>
           <p class="subheadline">Transcrime · Università Cattolica del Sacro Cuore, Milan</p>
-          <p class="positioning">Criminology research with an AML-oriented focus on beneficial ownership, risk indicators, suspicious patterns, and corporate control in the legal economy.</p>
-          <p class="bio-copy">Giovanni Nicolazzo is a researcher at Transcrime, Università Cattolica del Sacro Cuore. His work examines how criminal and high-risk actors enter, control, and use the legal economy through companies, ownership structures, and cross-border corporate chains. It combines criminological research with ownership-chain reconstruction, proxy-based screening, network analysis, and risk indicators, with a focus on criminal infiltration, sanctions circumvention, corruption, beneficial ownership, and money-laundering risk.</p>
+          <p class="positioning">I study how criminal and high-risk actors enter, control, and exploit the legal economy through companies, ownership structures, cross-border corporate chains, and legal vehicles.</p>
+          <p class="bio-copy">My work combines criminological research with ownership-chain reconstruction, beneficial ownership analysis, proxy-based screening, network analysis, and risk indicators to detect concealed control, suspicious exposure, and patterns relevant to AML, sanctions enforcement, and corruption research.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="#highlights">View highlights</a>
             <a class="btn btn-primary" href="#profiles">Research profiles</a>
@@ -573,8 +576,9 @@
       <div class="container calm-block">
         <div class="academic-grid">
           <div class="academic-copy">
-            <h2>Academic path</h2>
-            <p class="section-copy">PhD in Criminology, Università Cattolica del Sacro Cuore, 2025.<br/>Doctoral research: The criminal participation in the legal economy.</p>
+            <h2>Academic background</h2>
+            <p class="section-copy">PhD in Criminology, Università Cattolica del Sacro Cuore, 2025.</p>
+            <p class="section-copy">Doctoral research focused on criminal participation in the legal economy, with particular attention to how illicit and high-risk actors use legitimate firms, ownership arrangements, and market mechanisms to gain access to, preserve, or obscure control within lawful economic structures.</p>
             <a class="thesis-link" href="https://tesidottorato.depositolegale.it/handle/20.500.14242/201543" target="_blank" rel="noopener">Thesis record ↗</a>
           </div>
           <img src="/media/hero-academic_huc70d93133c25ab28042d15d1ecec0cb0_7012_400x0_resize_lanczos_3.png" alt="Doctoral defence context" class="academic-image" />
@@ -586,13 +590,32 @@
       <div class="container">
         <div class="section-header">
           <h2>Research focus</h2>
-          <p class="section-copy">My research has two main strands. The first examines the criminal component of the legal economy: how different criminal actors enter, influence, or exploit legitimate business, and how this can be studied beyond a narrowly mafia-centred lens. The second studies sanctions circumvention and corporate control: how sanctioned or high-risk actors use ownership chains, intermediary jurisdictions, and legal vehicles to preserve control and obscure exposure. Across both strands, I work on methods for reconstructing ownership structures, identifying beneficial ownership, estimating control, and screening suspicious patterns in business data for criminological and AML-oriented analysis.</p>
+          <p class="section-copy">My research develops along two connected strands.</p>
+          <p class="section-copy">The first concerns criminal infiltration in the legal economy: how criminal actors enter legitimate markets, reshape business activity, and exploit lawful firms, sectors, and corporate environments. This includes both conceptual work and empirical research aimed at moving beyond a narrowly mafia-centred understanding of infiltration.</p>
+          <p class="section-copy">The second concerns sanctions circumvention, concealed control, and high-risk corporate exposure: how sanctioned or otherwise high-risk actors use ownership chains, intermediary jurisdictions, legal vehicles, and proxy arrangements to preserve influence while obscuring traceability and responsibility.</p>
+          <p class="section-copy">Across both strands, I work on methods for reconstructing ownership structures, identifying beneficial ownership, estimating direct and indirect control, and screening suspicious patterns in business data for criminological, policy, and AML-oriented analysis.</p>
         </div>
         <div class="method-grid">
-          <div class="method-item"><strong>criminal infiltration in the legal economy</strong><span>Conceptual and empirical analysis of how criminal actors enter and shape legitimate markets.</span></div>
-          <div class="method-item"><strong>sanctions circumvention and corporate control</strong><span>Reconstructing control mechanisms across ownership chains, intermediary jurisdictions, and legal vehicles.</span></div>
-          <div class="method-item"><strong>beneficial ownership and ownership chains</strong><span>Tracing direct and indirect ownership to estimate control and identify concealed exposure.</span></div>
-          <div class="method-item"><strong>risk indicators and AML-oriented screening</strong><span>Applying indicators and proxy-based screening logic to detect suspicious business patterns at scale.</span></div>
+          <article class="method-item"><h3>criminal infiltration in the legal economy</h3><p>Conceptual and empirical analysis of how criminal actors enter, influence, and exploit legitimate markets, sectors, and business environments.</p></article>
+          <article class="method-item"><h3>sanctions circumvention and concealed control</h3><p>Study of how sanctioned or high-risk actors preserve influence through ownership chains, intermediaries, legal vehicles, and cross-border corporate structures.</p></article>
+          <article class="method-item"><h3>beneficial ownership and ownership-chain reconstruction</h3><p>Tracing direct and indirect ownership to estimate control, identify hidden exposure, and reconstruct opaque corporate positions.</p></article>
+          <article class="method-item"><h3>risk indicators, screening, and network methods</h3><p>Application of proxy-based screening, risk indicators, and network analysis to detect suspicious business patterns at scale.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methods" class="section-divider">
+      <div class="container">
+        <div class="section-header">
+          <h2>Methods and data</h2>
+          <p class="section-copy">My research relies on the reconstruction and interpretation of structured business data to study hidden control, suspicious corporate exposure, and criminal presence in legitimate markets.</p>
+        </div>
+        <div class="method-grid">
+          <article class="method-item"><h3>ownership-chain reconstruction</h3><p>Rebuilding direct and indirect corporate links to estimate control and identify intermediary layers.</p></article>
+          <article class="method-item"><h3>beneficial ownership analysis</h3><p>Using ownership information, legal relationships, and control logic to infer who ultimately benefits from or influences a company.</p></article>
+          <article class="method-item"><h3>proxy-based screening</h3><p>Developing indicators and screening strategies to detect patterns compatible with criminal infiltration, sanctions circumvention, or other forms of concealed high-risk exposure.</p></article>
+          <article class="method-item"><h3>network analysis</h3><p>Mapping connections among firms, owners, corporate vehicles, and jurisdictions to identify patterns of concentration, intermediation, and indirect control.</p></article>
+          <article class="method-item"><h3>AML-oriented risk interpretation</h3><p>Translating criminological evidence into analytical frames relevant to suspicious patterns, beneficial ownership opacity, and corporate risk assessment.</p></article>
         </div>
       </div>
     </section>
@@ -600,10 +623,10 @@
     <section id="highlights" class="section-divider">
       <div class="container">
         <div class="section-header">
-          <h2>Highlights</h2>
-          <p class="section-copy">A compact selection of outputs, with peer-reviewed and scholarly publications first, followed by selected reports and handbooks.</p>
+          <h2>Selected research</h2>
+          <p class="section-copy">A compact selection of publications and research outputs. Peer-reviewed and scholarly work appears first, followed by selected policy-oriented and applied outputs.</p>
         </div>
-        <h3 class="highlights-group-title">Featured research</h3>
+        <h3 class="highlights-group-title">Peer-reviewed and scholarly publications</h3>
         <div class="highlights-list">
           <article class="highlight-item featured-first">
             <p class="highlight-meta">European Journal of Criminology | 2026</p>
@@ -617,7 +640,7 @@
             <p class="highlight-meta">Journal of Economic Criminology | 2025</p>
             <div>
               <h3>Criminal participation in the legal economy during a health crisis: A screening of the Italian economy during 2020 and 2021</h3>
-              <p>Uses a proxy-based screening approach to identify suspicious participation in the Italian legal economy during the pandemic, moving beyond law-enforcement and judicial data.</p>
+              <p>Applies a proxy-based screening approach to identify suspicious participation in the Italian legal economy during the pandemic, moving beyond law-enforcement and judicial data alone.</p>
             </div>
             <a class="highlight-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">View publication ↗</a>
           </article>
@@ -625,19 +648,19 @@
             <p class="highlight-meta">Book chapter | 2025</p>
             <div>
               <h3>Beyond Mafia: Considerations on Criminal Infiltration in the Legal Economy</h3>
-              <p>Argues for a broader and more integrated criminological approach to criminal infiltration in the legal economy beyond a narrow mafia-only paradigm.</p>
+              <p>Argues for a broader criminological understanding of criminal infiltration in the legal economy beyond a narrow mafia-only paradigm.</p>
             </div>
             <a class="highlight-link" href="https://bristoluniversitypressdigital.com/edcollchap-oa/book/9781529247145/ch007.xml" target="_blank" rel="noopener">View publication ↗</a>
           </article>
         </div>
 
-        <h3 class="highlights-group-title">Selected reports and handbooks</h3>
+        <h3 class="highlights-group-title">Policy and applied research outputs</h3>
         <div class="highlights-list secondary">
           <article class="highlight-item">
             <p class="highlight-meta">KLEPTOTRACE report | 2025</p>
             <div>
               <h3>Schemes employed to circumvent sanctions</h3>
-              <p>Provides a systematic analysis of recurrent sanctions-evasion schemes, including actors, facilitators, corporate vehicles, jurisdictions and risk indicators.</p>
+              <p>Provides a structured analysis of recurrent sanctions-evasion schemes, including actors, facilitators, corporate vehicles, jurisdictions, and risk indicators.</p>
             </div>
             <a class="highlight-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener">View report ↗</a>
           </article>
@@ -645,7 +668,7 @@
             <p class="highlight-meta">KLEPTOTRACE handbook | 2024</p>
             <div>
               <h3>New forms of, and risk factors for, high-level transnational corruption schemes</h3>
-              <p>Examines forms and risk factors of high-level transnational corruption and kleptocracy, and the potential role of sanctions in addressing them.</p>
+              <p>Examines forms and risk factors of high-level transnational corruption and kleptocracy, including the possible role of sanctions in addressing them.</p>
             </div>
             <a class="highlight-link" href="https://www.transcrime.it/en/publications/new-forms-of-and-risk-factors-for-high-level-transnational-corruption-schemes/" target="_blank" rel="noopener">View handbook ↗</a>
           </article>
@@ -664,12 +687,12 @@
     <section id="profiles" class="section-divider">
       <div class="container">
         <div class="section-header">
-          <h2>Profiles and links</h2>
-          <p class="section-copy">For a fuller and more regularly updated record of publications, research activity, identifiers, and professional information, please use the profiles below.</p>
+          <h2>Profiles and identifiers</h2>
+          <p class="section-copy">For a fuller and more regularly updated record of publications, project activity, and research identifiers, the profiles below provide complementary information.</p>
         </div>
         <div class="profiles-shell">
                     <div class="profile-group">
-            <h3>Primary research profiles</h3>
+            <h3>Research profiles</h3>
             <div class="profile-grid primary">
               <a class="profile-card" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Institutional profile and project activity</span><em>Open profile ↗</em></a>
               <a class="profile-card" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Indexed publication and citation record</span><em>Open profile ↗</em></a>
@@ -679,7 +702,7 @@
           </div>
 
           <div class="profile-group">
-            <h3>Professional and complementary</h3>
+            <h3>Professional and technical</h3>
             <div class="profile-grid secondary">
               <a class="profile-card secondary" href="https://publicatt.unicatt.it/handle/10807/305067" target="_blank" rel="noopener"><strong>PubliRES</strong><span>University research record</span><em>Open profile ↗</em></a>
               <a class="profile-card secondary" href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional profile</span><em>Open profile ↗</em></a>
@@ -693,7 +716,7 @@
     <section id="contact" class="section-divider">
       <div class="container calm-block">
         <h2>Contact</h2>
-        <p class="section-copy">For research collaborations, project enquiries, or speaking requests, please use email or LinkedIn.</p>
+        <p class="section-copy">For research collaborations, speaking requests, or project-related enquiries, please get in touch by email or through LinkedIn.</p>
         <ul class="contact-list">
           <li>Email: <a href="mailto:giovanni.nicolazzo@unicatt.it">giovanni.nicolazzo@unicatt.it</a></li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener">/in/giovanni-nicolazzo</a></li>
