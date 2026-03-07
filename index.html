@@ -13,12 +13,12 @@
   <link rel="icon" type="image/png" href="/media/image.png" />
   <style>
     :root {
-      --bg: #f5f7fa;
+      --bg: #f2f5f9;
       --surface: #ffffff;
       --text: #131722;
       --muted: #5d6678;
       --line: #d9dfe6;
-      --accent: #1b4f9c;
+      --accent: #1d4d95;
       --accent-soft: #e8f0fc;
       --radius: 14px;
     }
@@ -84,7 +84,7 @@
 
     .nav-links a:hover { color: var(--accent); }
 
-    section { padding: 4.6rem 0; }
+    section { padding: 4.8rem 0; }
 
     .section-header {
       max-width: 70ch;
@@ -92,14 +92,14 @@
     }
 
     .hero {
-      padding-top: 5.3rem;
-      padding-bottom: 3.8rem;
+      padding-top: 5rem;
+      padding-bottom: 3.1rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 2.5rem;
+      grid-template-columns: 1.4fr 0.95fr;
+      gap: 2.8rem;
       align-items: center;
     }
 
@@ -114,61 +114,72 @@
 
     h1, h2, h3, p { margin-top: 0; }
     h1 {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-size: clamp(2.35rem, 5.1vw, 3.6rem);
       line-height: 1.15;
       letter-spacing: -0.035em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.65rem;
     }
 
     .headline {
-      font-size: clamp(1.05rem, 2.1vw, 1.32rem);
-      color: #1d2535;
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      color: #1c2536;
       font-weight: 600;
-      margin-bottom: 0.2rem;
-      max-width: 36ch;
+      margin-bottom: 0.3rem;
+      max-width: 34ch;
     }
 
     .subheadline {
-      font-size: 0.98rem;
+      font-size: 1rem;
       color: var(--muted);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.05rem;
     }
 
     .positioning {
-      max-width: 58ch;
+      max-width: 56ch;
       color: #2a3140;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .bio-copy {
+      max-width: 60ch;
+      color: #2b3342;
+      margin-bottom: 1.6rem;
     }
 
     .button-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 0.8rem;
+      gap: 0.75rem;
+      margin-bottom: 0;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      border-radius: 999px;
-      padding: 0.62rem 1rem;
+      border-radius: 11px;
+      padding: 0.66rem 1.05rem;
       text-decoration: none;
       font-size: 0.92rem;
       font-weight: 500;
       border: 1px solid transparent;
       transition: all 0.2s ease;
+      box-shadow: 0 1px 0 rgba(12, 18, 28, 0.08);
     }
 
     .btn-primary {
-      background: var(--text);
+      background: #182235;
       color: #fff;
     }
 
-    .btn-primary:hover { background: #2a3140; }
+    .btn-primary:hover {
+      background: #243048;
+      transform: translateY(-1px);
+    }
 
     .btn-secondary {
-      border-color: var(--line);
+      border-color: #ced7e5;
       background: var(--surface);
       color: var(--text);
     }
@@ -182,9 +193,10 @@
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 1rem;
-      max-width: 420px;
+      padding: 0.9rem;
+      max-width: 400px;
       justify-self: end;
+      box-shadow: 0 18px 36px rgba(15, 27, 50, 0.08);
     }
 
     .hero-image {
@@ -210,7 +222,7 @@
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 2.1rem;
+      padding: 1.6rem;
     }
 
     .section-divider {
@@ -244,7 +256,7 @@
       display: grid;
       gap: 0.8rem;
       margin-top: 1.4rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .method-item {
@@ -270,12 +282,17 @@
 
     .highlights-list {
       display: grid;
-      gap: 0.85rem;
-      margin-top: 1.3rem;
+      gap: 0.75rem;
+      margin-top: 0.9rem;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 0 1.2rem 1.1rem;
+      padding: 0 1.2rem 1rem;
+    }
+
+    .highlights-list.secondary {
+      background: #f9fbfe;
+      border-color: #dfe5ef;
     }
 
     .highlight-item {
@@ -318,11 +335,29 @@
 
     .highlight-link:hover { text-decoration: underline; }
 
+    .highlight-item.featured-first {
+      background: #fbfdff;
+      margin: 0 -0.6rem;
+      padding: 1rem 0.6rem 0;
+      border-radius: 10px;
+      border-top: 0;
+    }
+
+    .highlights-group-title {
+      margin-top: 2rem;
+      margin-bottom: 0.25rem;
+      font-size: 1.06rem;
+    }
+
+    .earlier-work {
+      opacity: 0.88;
+    }
+
     .profiles-shell {
       background: #1d2637;
       border-radius: var(--radius);
       border: 1px solid #23314b;
-      padding: 1.5rem;
+      padding: 1.65rem;
       color: #f2f6ff;
       margin-top: 1.1rem;
     }
@@ -335,6 +370,16 @@
 
     .profile-group {
       margin-top: 1.2rem;
+    }
+
+    .profile-grid.primary {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .profile-grid.secondary {
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.75rem;
     }
 
     .profile-group h3 {
@@ -358,7 +403,7 @@
       padding: 0.95rem;
       text-decoration: none;
       transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
-      min-height: 116px;
+      min-height: 120px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -368,6 +413,43 @@
       border-color: #c8d6f1;
       transform: translateY(-2px);
       background: rgba(255, 255, 255, 0.08);
+    }
+
+    .profile-card.secondary {
+      min-height: 102px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .academic-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .academic-image {
+      width: 100%;
+      max-width: 220px;
+      justify-self: end;
+      border-radius: 10px;
+      border: 1px solid #d3dbe8;
+      object-fit: cover;
+      aspect-ratio: 5 / 4;
+    }
+
+    .academic-copy p {
+      margin-bottom: 0.45rem;
+    }
+
+    .thesis-link {
+      font-size: 0.88rem;
+      color: #5a6880;
+      text-decoration: none;
+    }
+
+    .thesis-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     .profile-card strong {
@@ -420,6 +502,11 @@
         max-width: 420px;
         justify-self: start;
       }
+      .academic-grid { grid-template-columns: 1fr; }
+      .academic-image {
+        justify-self: start;
+        max-width: 300px;
+      }
       .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .highlight-item { grid-template-columns: 1fr; }
       .highlight-meta { min-width: 0; }
@@ -466,9 +553,10 @@
         <div>
           <p class="eyebrow">Research portfolio</p>
           <h1>Giovanni Nicolazzo</h1>
-          <p class="headline">Researcher on criminal infiltration, sanctions circumvention and ownership structures.</p>
+          <p class="headline">Researcher on criminal infiltration, sanctions circumvention, and ownership structures</p>
           <p class="subheadline">Transcrime · Università Cattolica del Sacro Cuore, Milan</p>
-          <p class="positioning">Giovanni Nicolazzo is a researcher at Transcrime, Università Cattolica del Sacro Cuore. His work examines how criminal and high-risk actors enter, control and use the legal economy through companies, ownership structures and cross-border corporate chains. He combines criminological research with ownership-chain reconstruction, proxy-based screening, network analysis and risk indicators, with a focus on criminal infiltration, sanctions circumvention, corruption and beneficial ownership.</p>
+          <p class="positioning">Criminology research with an AML-oriented focus on beneficial ownership, risk indicators, suspicious patterns, and corporate control in the legal economy.</p>
+          <p class="bio-copy">Giovanni Nicolazzo is a researcher at Transcrime, Università Cattolica del Sacro Cuore. His work examines how criminal and high-risk actors enter, control, and use the legal economy through companies, ownership structures, and cross-border corporate chains. It combines criminological research with ownership-chain reconstruction, proxy-based screening, network analysis, and risk indicators, with a focus on criminal infiltration, sanctions circumvention, corruption, beneficial ownership, and money-laundering risk.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="#highlights">View highlights</a>
             <a class="btn btn-primary" href="#profiles">Research profiles</a>
@@ -483,12 +571,14 @@
 
     <section class="section-divider">
       <div class="container calm-block">
-        <h2>Education</h2>
-        <p class="section-copy">PhD in Criminology (2025), Università Cattolica del Sacro Cuore (Transcrime).</p>
-        <ul class="bio-meta" aria-label="Education and thesis summary">
-          <li><strong>PhD title:</strong> Criminology</li>
-          <li><strong>Thesis:</strong> <a href="https://tesidottorato.depositolegale.it/handle/20.500.14242/201543" target="_blank" rel="noopener"><em>The criminal participation in the legal economy</em></a></li>
-        </ul>
+        <div class="academic-grid">
+          <div class="academic-copy">
+            <h2>Academic path</h2>
+            <p class="section-copy">PhD in Criminology, Università Cattolica del Sacro Cuore, 2025.<br/>Doctoral research: The criminal participation in the legal economy.</p>
+            <a class="thesis-link" href="https://tesidottorato.depositolegale.it/handle/20.500.14242/201543" target="_blank" rel="noopener">Thesis record ↗</a>
+          </div>
+          <img src="/media/hero-academic_huc70d93133c25ab28042d15d1ecec0cb0_7012_400x0_resize_lanczos_3.png" alt="Doctoral defence context" class="academic-image" />
+        </div>
       </div>
     </section>
 
@@ -496,13 +586,13 @@
       <div class="container">
         <div class="section-header">
           <h2>Research focus</h2>
-          <p class="section-copy">My research has two main strands. The first concerns the criminal component of the legal economy: how different criminal actors participate in, control or exploit legitimate business, and how this can be studied beyond a narrowly mafia-centred lens. The second concerns sanctions circumvention and corporate control: how sanctioned or high-risk actors use ownership chains, intermediary jurisdictions and legal vehicles to preserve control and obscure exposure. Across both strands, I work on methods for reconstructing ownership structures, identifying risk indicators and screening suspicious patterns in business data.</p>
+          <p class="section-copy">My research has two main strands. The first examines the criminal component of the legal economy: how different criminal actors enter, influence, or exploit legitimate business, and how this can be studied beyond a narrowly mafia-centred lens. The second studies sanctions circumvention and corporate control: how sanctioned or high-risk actors use ownership chains, intermediary jurisdictions, and legal vehicles to preserve control and obscure exposure. Across both strands, I work on methods for reconstructing ownership structures, identifying beneficial ownership, estimating control, and screening suspicious patterns in business data for criminological and AML-oriented analysis.</p>
         </div>
         <div class="method-grid">
-          <div class="method-item"><strong>Criminal component of the legal economy</strong><span>Conceptual and empirical work on how criminal actors participate in and influence legitimate markets.</span></div>
-          <div class="method-item"><strong>Sanctions circumvention and corporate control</strong><span>Analysis of ownership chains, intermediary jurisdictions and legal vehicles used to preserve control and reduce exposure.</span></div>
-          <div class="method-item"><strong>Beneficial ownership and ownership chains</strong><span>Reconstructing direct and indirect ownership to estimate control and identify hidden links.</span></div>
-          <div class="method-item"><strong>Proxy-based screening and risk indicators</strong><span>Designing indicator-driven screening models to detect suspicious business patterns at scale.</span></div>
+          <div class="method-item"><strong>criminal infiltration in the legal economy</strong><span>Conceptual and empirical analysis of how criminal actors enter and shape legitimate markets.</span></div>
+          <div class="method-item"><strong>sanctions circumvention and corporate control</strong><span>Reconstructing control mechanisms across ownership chains, intermediary jurisdictions, and legal vehicles.</span></div>
+          <div class="method-item"><strong>beneficial ownership and ownership chains</strong><span>Tracing direct and indirect ownership to estimate control and identify concealed exposure.</span></div>
+          <div class="method-item"><strong>risk indicators and AML-oriented screening</strong><span>Applying indicators and proxy-based screening logic to detect suspicious business patterns at scale.</span></div>
         </div>
       </div>
     </section>
@@ -513,15 +603,15 @@
           <h2>Highlights</h2>
           <p class="section-copy">A compact selection of outputs, with peer-reviewed and scholarly publications first, followed by selected reports and handbooks.</p>
         </div>
-        <h3>Featured research</h3>
+        <h3 class="highlights-group-title">Featured research</h3>
         <div class="highlights-list">
-          <article class="highlight-item">
+          <article class="highlight-item featured-first">
             <p class="highlight-meta">European Journal of Criminology | 2026</p>
             <div>
               <h3>On the enforcement of targeted sanctions: Estimating the control of sanctioned Russian entities over European companies and proposing a methodology to detect sanction circumvention</h3>
               <p>Develops a methodology to reconstruct ownership chains, estimate control by sanctioned Russian entities over European companies, and identify potential sanction-circumvention patterns.</p>
             </div>
-            <a class="highlight-link" href="https://scholar.google.com/scholar?q=On+the+enforcement+of+targeted+sanctions%3A+Estimating+the+control+of+sanctioned+Russian+entities+over+European+companies+and+proposing+a+methodology+to+detect+sanction+circumvention" target="_blank" rel="noopener">View publication ↗</a>
+            <a class="highlight-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener">View publication ↗</a>
           </article>
           <article class="highlight-item">
             <p class="highlight-meta">Journal of Economic Criminology | 2025</p>
@@ -529,7 +619,7 @@
               <h3>Criminal participation in the legal economy during a health crisis: A screening of the Italian economy during 2020 and 2021</h3>
               <p>Uses a proxy-based screening approach to identify suspicious participation in the Italian legal economy during the pandemic, moving beyond law-enforcement and judicial data.</p>
             </div>
-            <a class="highlight-link" href="https://scholar.google.com/scholar?q=Criminal+participation+in+the+legal+economy+during+a+health+crisis%3A+A+screening+of+the+Italian+economy+during+2020+and+2021" target="_blank" rel="noopener">View publication ↗</a>
+            <a class="highlight-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">View publication ↗</a>
           </article>
           <article class="highlight-item">
             <p class="highlight-meta">Book chapter | 2025</p>
@@ -537,19 +627,19 @@
               <h3>Beyond Mafia: Considerations on Criminal Infiltration in the Legal Economy</h3>
               <p>Argues for a broader and more integrated criminological approach to criminal infiltration in the legal economy beyond a narrow mafia-only paradigm.</p>
             </div>
-            <a class="highlight-link" href="https://scholar.google.com/scholar?q=Beyond+Mafia%3A+Considerations+on+Criminal+Infiltration+in+the+Legal+Economy" target="_blank" rel="noopener">View publication ↗</a>
+            <a class="highlight-link" href="https://bristoluniversitypressdigital.com/edcollchap-oa/book/9781529247145/ch007.xml" target="_blank" rel="noopener">View publication ↗</a>
           </article>
         </div>
 
-        <h3>Selected reports and handbooks</h3>
-        <div class="highlights-list">
+        <h3 class="highlights-group-title">Selected reports and handbooks</h3>
+        <div class="highlights-list secondary">
           <article class="highlight-item">
             <p class="highlight-meta">KLEPTOTRACE report | 2025</p>
             <div>
               <h3>Schemes employed to circumvent sanctions</h3>
               <p>Provides a systematic analysis of recurrent sanctions-evasion schemes, including actors, facilitators, corporate vehicles, jurisdictions and risk indicators.</p>
             </div>
-            <a class="highlight-link" href="https://www.transcrime.it/en/?s=Schemes+employed+to+circumvent+sanctions" target="_blank" rel="noopener">View report ↗</a>
+            <a class="highlight-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener">View report ↗</a>
           </article>
           <article class="highlight-item">
             <p class="highlight-meta">KLEPTOTRACE handbook | 2024</p>
@@ -557,15 +647,15 @@
               <h3>New forms of, and risk factors for, high-level transnational corruption schemes</h3>
               <p>Examines forms and risk factors of high-level transnational corruption and kleptocracy, and the potential role of sanctions in addressing them.</p>
             </div>
-            <a class="highlight-link" href="https://www.transcrime.it/en/?s=New+forms+of+and+risk+factors+for+high-level+transnational+corruption+schemes" target="_blank" rel="noopener">View handbook ↗</a>
+            <a class="highlight-link" href="https://www.transcrime.it/en/publications/new-forms-of-and-risk-factors-for-high-level-transnational-corruption-schemes/" target="_blank" rel="noopener">View handbook ↗</a>
           </article>
-          <article class="highlight-item">
-            <p class="highlight-meta">Research in Brief | 2021</p>
+          <article class="highlight-item earlier-work">
+            <p class="highlight-meta">Research in Brief | 2021 · earlier work</p>
             <div>
               <h3>The changes in ownership of Italian companies during the Covid-19 emergency</h3>
               <p>An early empirical analysis of ownership changes in Italian companies during Covid-19 and the related risks of criminal infiltration and money laundering.</p>
             </div>
-            <a class="highlight-link" href="https://www.transcrime.it/en/?s=The+changes+in+ownership+of+Italian+companies+during+the+Covid-19+emergency" target="_blank" rel="noopener">View brief ↗</a>
+            <a class="highlight-link" href="https://www.transcrime.it/en/publications/the-changes-in-ownership-of-italian-companies-during-the-covid-19-emergency/" target="_blank" rel="noopener">View brief ↗</a>
           </article>
         </div>
       </div>
@@ -575,27 +665,25 @@
       <div class="container">
         <div class="section-header">
           <h2>Profiles and links</h2>
-          <p class="section-copy">For a fuller and more regularly updated record of publications, research activity and professional information, please use the profiles below.</p>
+          <p class="section-copy">For a fuller and more regularly updated record of publications, research activity, identifiers, and professional information, please use the profiles below.</p>
         </div>
         <div class="profiles-shell">
-          <p>This section is the primary routing hub for publications, institutional activity, identifiers, and professional or technical updates.</p>
-
-          <div class="profile-group">
+                    <div class="profile-group">
             <h3>Primary research profiles</h3>
-            <div class="profile-grid">
-              <a class="profile-card" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Institutional profile and project activity.</span><em>Open profile ↗</em></a>
-              <a class="profile-card" href="https://www.researchgate.net/profile/Giovanni-Nicolazzo" target="_blank" rel="noopener"><strong>ResearchGate</strong><span>Publications and uploaded full texts.</span><em>Open profile ↗</em></a>
-              <a class="profile-card" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Citation-oriented publication record.</span><em>Open profile ↗</em></a>
-              <a class="profile-card" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Persistent research identifier.</span><em>Open profile ↗</em></a>
+            <div class="profile-grid primary">
+              <a class="profile-card" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Institutional profile and project activity</span><em>Open profile ↗</em></a>
+              <a class="profile-card" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Indexed publication and citation record</span><em>Open profile ↗</em></a>
+              <a class="profile-card" href="https://www.researchgate.net/profile/Giovanni-Nicolazzo" target="_blank" rel="noopener"><strong>ResearchGate</strong><span>Publications and accessible full texts</span><em>Open profile ↗</em></a>
+              <a class="profile-card" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Persistent research identifier</span><em>Open profile ↗</em></a>
             </div>
           </div>
 
           <div class="profile-group">
             <h3>Professional and complementary</h3>
-            <div class="profile-grid">
-              <a class="profile-card" href="https://publicatt.unicatt.it/handle/10807/305067" target="_blank" rel="noopener"><strong>PubliRES</strong><span>University research record.</span><em>Open profile ↗</em></a>
-              <a class="profile-card" href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional profile.</span><em>Open profile ↗</em></a>
-              <a class="profile-card" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Technical and code-based work.</span><em>Open profile ↗</em></a>
+            <div class="profile-grid secondary">
+              <a class="profile-card secondary" href="https://publicatt.unicatt.it/handle/10807/305067" target="_blank" rel="noopener"><strong>PubliRES</strong><span>University research record</span><em>Open profile ↗</em></a>
+              <a class="profile-card secondary" href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional profile</span><em>Open profile ↗</em></a>
+              <a class="profile-card secondary" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Technical and code-based work</span><em>Open profile ↗</em></a>
             </div>
           </div>
         </div>
