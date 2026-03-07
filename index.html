@@ -7,159 +7,524 @@
   <meta name="description" content="Compact research portfolio of Giovanni Nicolazzo, researcher in criminology, financial crime and corporate opacity at Transcrime, Università Cattolica del Sacro Cuore, Milan." />
   <meta name="author" content="Giovanni Nicolazzo" />
   <title>Giovanni Nicolazzo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" />
-  <link rel="stylesheet" href="/css/wowchemy.042e26407c9e383d96a1f26d6787c686.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="icon" type="image/png" href="/media/image.png" />
   <style>
-    .page-wrapper {font-size: 1.04rem;}
-    .section-note {max-width: 760px;}
-    .btn-row {display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.25rem;}
-    .btn-row .btn {border-radius: 0.35rem;}
-    .profile-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.9rem; margin-top: 1rem;}
-    .profile-grid a, .highlight-card {border: 1px solid rgba(0,0,0,.12); border-radius: .5rem; padding: 1rem; text-decoration: none; color: inherit; background: #fff;}
-    .profile-grid a:hover {border-color: #1565c0; color: #1565c0;}
-    .highlights-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem;}
-    .highlight-type {font-size: .9rem; color: #4f5d75; margin-bottom: .35rem;}
-    .hero-title {font-size: 2.2rem; margin-bottom: .25rem;}
-    .hero-subtitle {font-size: 1.4rem; font-weight: 600; margin-bottom: .4rem;}
+    :root {
+      --bg: #f6f7f8;
+      --surface: #ffffff;
+      --text: #131722;
+      --muted: #5d6678;
+      --line: #d9dfe6;
+      --accent: #1b4f9c;
+      --accent-soft: #e8f0fc;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(246, 247, 248, 0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 72px;
+      gap: 1rem;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    section { padding: 4.5rem 0; }
+
+    .section-header {
+      max-width: 70ch;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin-bottom: 0.55rem;
+    }
+
+    .headline {
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .subheadline {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .positioning {
+      max-width: 62ch;
+      color: #2a3140;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.62rem 1rem;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: #2a3140; }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-image-wrap {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      max-width: 420px;
+      justify-self: end;
+    }
+
+    .hero-image {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: calc(var(--radius) - 6px);
+      display: block;
+    }
+
+    .hero-image-caption {
+      margin-top: 0.8rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-copy {
+      max-width: 68ch;
+      color: #2b3342;
+    }
+
+    .calm-block {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .section-divider {
+      border-top: 1px solid var(--line);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      background: var(--accent-soft);
+      color: #163f7c;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      padding: 0.38rem 0.78rem;
+      font-weight: 500;
+    }
+
+    .highlights-list {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.4rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0 1.2rem 1.1rem;
+    }
+
+    .highlight-item {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr) auto;
+      gap: 0.75rem 1rem;
+      align-items: start;
+      border-top: 1px solid var(--line);
+      padding-top: 0.9rem;
+    }
+
+    .highlight-meta {
+      font-size: 0.83rem;
+      color: var(--muted);
+      font-weight: 500;
+      min-width: 118px;
+    }
+
+    .highlight-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+    }
+
+    .highlight-item p {
+      margin: 0;
+      color: #313a4b;
+      font-size: 0.95rem;
+    }
+
+    .highlight-link {
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .highlight-link:hover { text-decoration: underline; }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.2rem;
+    }
+
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem;
+      text-decoration: none;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .profile-card strong {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .profile-card span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .profile-card em {
+      margin-top: 0.55rem;
+      color: var(--accent);
+      font-style: normal;
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .contact-list a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-list a:hover { text-decoration: underline; }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 1.6rem 0 2.2rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .site-footer p { margin: 0.2rem 0; }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-image-wrap {
+        max-width: 420px;
+        justify-self: start;
+      }
+      .highlight-item { grid-template-columns: 1fr; }
+      .highlight-meta { min-width: 0; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 0;
+      }
+      .nav-links { gap: 0.85rem; }
+      section { padding: 3.3rem 0; }
+      .hero { padding-top: 3.6rem; }
+      .calm-block { padding: 1.3rem; }
+      .highlights-list {
+        padding-left: 0.95rem;
+        padding-right: 0.95rem;
+      }
+    }
   </style>
 </head>
-<body id="top" class="page-wrapper">
-  <div class="page-header header--fixed">
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-        <div class="container-xl">
-          <div class="d-none d-lg-inline-flex"><a class="navbar-brand" href="/">Giovanni Nicolazzo</a></div>
-          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span></button>
-          <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class="navbar-brand" href="/">Giovanni Nicolazzo</a></div>
-          <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-            <ul class="navbar-nav d-md-inline-flex">
-              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-              <li class="nav-item"><a class="nav-link" href="#highlights">Highlights</a></li>
-              <li class="nav-item"><a class="nav-link" href="#profiles">Profiles</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Giovanni Nicolazzo</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#profiles">Profiles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="about">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Research portfolio</p>
+          <h1>Giovanni Nicolazzo</h1>
+          <p class="headline">Researcher in criminology, financial crime and corporate opacity</p>
+          <p class="subheadline">Transcrime · Università Cattolica del Sacro Cuore, Milan</p>
+          <p class="positioning">I work at the intersection of crime, institutions, and the legal economy. My research maps how illicit actors exploit corporate structures, intermediary networks, and governance gaps to conceal risk. I combine criminological inquiry with data-driven methods to produce practical evidence for policy, compliance, and investigative environments.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#highlights">View highlights</a>
+            <a class="btn btn-primary" href="#profiles">External profiles</a>
+            <a class="btn btn-primary" href="#contact">Contact</a>
+          </div>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener">Transcrime</a>
+            <a class="btn btn-secondary" href="https://www.researchgate.net/profile/Giovanni-Nicolazzo" target="_blank" rel="noopener">ResearchGate</a>
+            <a class="btn btn-secondary" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
           </div>
         </div>
-      </nav>
-    </header>
-  </div>
-
-  <div class="page-body">
-    <section id="home" class="home-section">
-      <div class="container">
-        <h1 class="hero-title">Giovanni Nicolazzo</h1>
-        <p class="hero-subtitle">Researcher in criminology, financial crime and corporate opacity</p>
-        <p><strong>Transcrime | Università Cattolica del Sacro Cuore, Milan</strong></p>
-        <p class="section-note">Research on organised and financial crime, criminal infiltration in the legal economy, corruption, sanctions circumvention, and ownership structures.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#research">Research profile</a>
-          <a class="btn btn-primary" href="#profiles">Profiles and links</a>
-          <a class="btn btn-primary" href="#contact">Contact</a>
-        </div>
-        <div class="btn-row">
-          <a class="btn btn-outline-primary" href="https://www.transcrime.it" target="_blank" rel="noopener">Transcrime</a>
-          <a class="btn btn-outline-primary" href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a>
-          <a class="btn btn-outline-primary" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        <div class="hero-image-wrap">
+          <img src="/authors/admin/I7JK6AxX_400x400.jpg" alt="Portrait of Giovanni Nicolazzo" class="hero-image" />
+          <p class="hero-image-caption">Criminology, financial crime, and beneficial ownership analysis.</p>
         </div>
       </div>
     </section>
 
-    <section id="bio" class="home-section">
-      <div class="container">
-        <h2>Short bio</h2>
-        <p class="section-note">Giovanni Nicolazzo is a researcher at Transcrime, Università Cattolica del Sacro Cuore, where he completed his PhD in Criminology in 2025. His work focuses on organised and financial crime, criminal infiltration in the legal economy, corruption, sanctions circumvention, and the analysis of ownership structures. He combines criminological research with data-driven methods, network analysis, and risk screening tools to examine how illicit actors use legal entities and cross-border corporate structures.</p>
+    <section class="section-divider">
+      <div class="container calm-block">
+        <h2>About</h2>
+        <p class="section-copy">Giovanni Nicolazzo is a researcher at Transcrime, Università Cattolica del Sacro Cuore, where he completed his PhD in Criminology in 2025. His work focuses on organised and financial crime, criminal infiltration in legitimate markets, corruption, sanctions circumvention, and ownership structures. He develops analytical frameworks that connect criminological interpretation with operational risk detection.</p>
       </div>
     </section>
 
-    <section id="research" class="home-section">
+    <section id="research" class="section-divider">
       <div class="container">
-        <h2>Research focus</h2>
-        <p class="section-note">My research focuses on the intersection between crime and the legal economy. I am particularly interested in organised and financial crime, criminal infiltration in legitimate business, corruption, sanctions circumvention, ownership structures, beneficial ownership, and the use of data-driven methods for risk detection. Across these areas, I work on ways to make hidden corporate relationships and high-risk patterns more visible and measurable.</p>
-        <h3>Areas of work</h3>
-        <ul>
-          <li>criminal infiltration in the legal economy</li>
-          <li>sanctions circumvention and ownership structures</li>
-          <li>corruption and third-party risk</li>
-          <li>corporate opacity and beneficial ownership</li>
-          <li>data-driven risk detection</li>
-        </ul>
+        <div class="section-header">
+          <h2>Research focus</h2>
+          <p class="section-copy">Current work investigates how corporate opacity, intermediary ecosystems, and cross-border ownership chains shape illicit opportunity structures. The goal is to identify measurable patterns that support prevention, screening, and evidence-based policy design.</p>
+        </div>
+        <div class="pill-row">
+          <span class="pill">criminal infiltration in legal markets</span>
+          <span class="pill">sanctions circumvention</span>
+          <span class="pill">beneficial ownership and opacity</span>
+          <span class="pill">data-driven risk detection</span>
+        </div>
       </div>
     </section>
 
-    <section id="highlights" class="home-section">
+    <section id="highlights" class="section-divider">
       <div class="container">
-        <h2>Selected highlights</h2>
-        <p class="section-note">This website does not aim to reproduce a full list of publications or activities. It offers a small selection of outputs that represent my work. For a fuller and more regularly updated record, please refer to the external profiles linked below.</p>
-        <div class="highlights-grid">
-          <article class="highlight-card">
-            <p class="highlight-type">Journal article</p>
-            <h3>Criminal participation in the legal economy during a health crisis: A screening of the Italian economy during 2020 and 2021</h3>
-            <p>A study proposing a screening approach to identify suspicious participation in the Italian legal economy during the Covid-19 period.</p>
+        <div class="section-header">
+          <h2>Selected highlights</h2>
+          <p class="section-copy">A focused selection of work. For a complete and regularly updated publication record, use the external profile links below.</p>
+        </div>
+        <div class="highlights-list">
+          <article class="highlight-item">
+            <p class="highlight-meta">Journal article · 2024</p>
+            <div>
+              <h3>Criminal participation in the legal economy during a health crisis</h3>
+              <p>Introduces a screening framework for identifying suspicious participation patterns in Italian firms during 2020–2021.</p>
+            </div>
+            <a class="highlight-link" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener">View source ↗</a>
           </article>
-          <article class="highlight-card">
-            <p class="highlight-type">Report</p>
-            <h3>Restrictive measures: the challenges in front of the EU. Report on schemes employed to circumvent sanctions</h3>
-            <p>A report on key sanctions circumvention schemes, focusing on methods, legal vehicles, and enforcement challenges.</p>
+          <article class="highlight-item">
+            <p class="highlight-meta">Policy report · 2024</p>
+            <div>
+              <h3>Restrictive measures and EU sanctions circumvention schemes</h3>
+              <p>Maps common sanctions evasion mechanisms, legal vehicles, and enforcement friction points in the EU context.</p>
+            </div>
+            <a class="highlight-link" href="https://www.transcrime.it/en/" target="_blank" rel="noopener">View source ↗</a>
           </article>
-          <article class="highlight-card">
-            <p class="highlight-type">Handbook</p>
-            <h3>Handbook on new forms of, and risk factors for, high-level transnational corruption schemes</h3>
-            <p>A handbook examining patterns and risk factors of high-level transnational corruption and kleptocracy.</p>
+          <article class="highlight-item">
+            <p class="highlight-meta">Handbook · 2023</p>
+            <div>
+              <h3>Risk factors in high-level transnational corruption schemes</h3>
+              <p>Outlines practical indicators for detecting kleptocratic and corruption-linked structures across jurisdictions.</p>
+            </div>
+            <a class="highlight-link" href="https://www.researchgate.net/profile/Giovanni-Nicolazzo" target="_blank" rel="noopener">View source ↗</a>
           </article>
-          <article class="highlight-card">
-            <p class="highlight-type">Applied research</p>
-            <h3>Major public projects and integrity</h3>
-            <p>Research on integrity safeguards, anti-mafia controls, and risk indicators in major public projects.</p>
+          <article class="highlight-item">
+            <p class="highlight-meta">Applied research · 2023</p>
+            <div>
+              <h3>Integrity safeguards in major public projects</h3>
+              <p>Examines anti-mafia controls and early-warning indicators for governance and procurement integrity risks.</p>
+            </div>
+            <a class="highlight-link" href="https://publicatt.unicatt.it/handle/10807/305067" target="_blank" rel="noopener">View source ↗</a>
           </article>
         </div>
-        <div class="btn-row"><a class="btn btn-primary" href="#profiles">View full record on external profiles</a></div>
       </div>
     </section>
 
-    <section id="profiles" class="home-section">
+    <section id="profiles" class="section-divider">
       <div class="container">
-        <h2>Profiles and links</h2>
-        <p class="section-note">For a fuller and more regularly updated record of publications, research activity, and professional information, please refer to the following profiles.</p>
+        <div class="section-header">
+          <h2>Profiles and links</h2>
+          <p class="section-copy">Authoritative external destinations for publications, institutional activity, and professional updates.</p>
+        </div>
         <div class="profile-grid">
-          <a href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime profile</strong></a>
-          <a href="https://www.researchgate.net/profile/Giovanni-Nicolazzo" target="_blank" rel="noopener"><strong>ResearchGate</strong></a>
-          <a href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong></a>
-          <a href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong></a>
-          <a href="https://publicatt.unicatt.it/handle/10807/305067" target="_blank" rel="noopener"><strong>PubliRES</strong></a>
-          <a href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>LinkedIn</strong></a>
-          <a href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong></a>
+          <a class="profile-card" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Institutional research profile and team publications.</span><em>Open profile ↗</em></a>
+          <a class="profile-card" href="https://www.researchgate.net/profile/Giovanni-Nicolazzo" target="_blank" rel="noopener"><strong>ResearchGate</strong><span>Working papers and publication updates.</span><em>Open profile ↗</em></a>
+          <a class="profile-card" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Citation tracking and indexed outputs.</span><em>Open profile ↗</em></a>
+          <a class="profile-card" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Persistent academic identity and records.</span><em>Open profile ↗</em></a>
+          <a class="profile-card" href="https://publicatt.unicatt.it/handle/10807/305067" target="_blank" rel="noopener"><strong>PubliRES</strong><span>Università Cattolica research repository.</span><em>Open profile ↗</em></a>
+          <a class="profile-card" href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional updates and collaborations.</span><em>Open profile ↗</em></a>
+          <a class="profile-card" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Code, analysis notebooks, and tooling.</span><em>Open profile ↗</em></a>
         </div>
-        <p class="section-note" style="margin-top:1rem;">This website is intended as a compact overview, while external profiles host fuller and more frequently updated records.</p>
       </div>
     </section>
 
-    <section id="contact" class="home-section">
-      <div class="container">
+    <section id="contact" class="section-divider">
+      <div class="container calm-block">
         <h2>Contact</h2>
-        <p class="section-note">I am based in Milan and work at Transcrime, Università Cattolica del Sacro Cuore. For research collaborations, speaking invitations, project enquiries, or media requests, please get in touch by email or via LinkedIn.</p>
-        <ul>
-          <li><a href="mailto:giovanni.nicolazzo@unicatt.it">giovanni.nicolazzo@unicatt.it</a></li>
-          <li><a href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener">ORCID</a></li>
-          <li><a href="https://github.com/colazeta" target="_blank" rel="noopener">GitHub</a></li>
+        <p class="section-copy">For research collaborations, speaking invitations, project enquiries, or media requests, please contact me by email or LinkedIn.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:giovanni.nicolazzo@unicatt.it">giovanni.nicolazzo@unicatt.it</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener">/in/giovanni-nicolazzo</a></li>
+          <li>ORCID: <a href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener">0000-0002-5551-2682</a></li>
+          <li>GitHub: <a href="https://github.com/colazeta" target="_blank" rel="noopener">github.com/colazeta</a></li>
         </ul>
       </div>
     </section>
-  </div>
+  </main>
 
-  <div class="page-footer">
+  <footer class="site-footer">
     <div class="container">
-      <footer class="site-footer">
-        <p class="powered-by"><a href="/privacy/">Privacy notice</a> &middot; <a href="/terms/">Website notice</a></p>
-        <p class="powered-by copyright-license-text">© Giovanni Nicolazzo</p>
-      </footer>
+      <p>© Giovanni Nicolazzo</p>
+      <p><a href="/privacy/">Privacy</a> · <a href="/terms/">Website notice</a></p>
     </div>
-  </div>
-  <script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+  </footer>
 </body>
 </html>
