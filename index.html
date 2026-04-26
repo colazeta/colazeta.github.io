@@ -40,8 +40,8 @@
       min-height: 100vh;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
     a { color: inherit; }
+    h1, h2, h3, p { margin-top: 0; }
 
     .container {
       width: min(1140px, 93vw);
@@ -155,7 +155,7 @@
       margin-bottom: 0.55rem;
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.12em;
       font-weight: 700;
       color: var(--accent);
     }
@@ -282,6 +282,7 @@
       font-size: 0.89rem;
       font-weight: 600;
       width: fit-content;
+      font-size: 0.9rem;
     }
 
     .card-link:hover { text-decoration: underline; }
@@ -375,6 +376,15 @@
         transition: none;
       }
       .horizontal-track { scroll-behavior: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
     }
   </style>
 </head>
