@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Portfolio di Giovanni Nicolazzo: lavori pubblicati e interessi di ricerca su criminalità economica, beneficial ownership e sanzioni." />
+  <meta name="description" content="Portfolio di Giovanni Nicolazzo: lavori realizzati e interessi di ricerca in un'esperienza one-page dinamica." />
   <meta name="author" content="Giovanni Nicolazzo" />
   <title>Giovanni Nicolazzo · Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,18 +13,17 @@
   <link rel="icon" type="image/png" href="/media/image.png" />
   <style>
     :root {
-      --bg-0: #080b14;
-      --bg-1: #0f1729;
-      --surface: rgba(18, 27, 45, 0.7);
-      --surface-solid: #121c30;
-      --text: #edf4ff;
-      --muted: #9aaccc;
-      --line: rgba(154, 172, 204, 0.2);
-      --accent: #67d4ff;
-      --accent-2: #8b7bff;
-      --radius: 18px;
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-      --glow: 0 0 0 1px rgba(103, 212, 255, 0.25), 0 0 42px rgba(103, 212, 255, 0.2);
+      --bg: #f4f8fc;
+      --bg-soft: #e8f0f7;
+      --surface: rgba(255, 255, 255, 0.86);
+      --solid: #ffffff;
+      --text: #1b3554;
+      --muted: #5d7691;
+      --line: rgba(84, 124, 161, 0.2);
+      --accent: #2f85d6;
+      --accent-soft: rgba(47, 133, 214, 0.12);
+      --radius: 20px;
+      --shadow: 0 18px 44px rgba(22, 60, 99, 0.12);
     }
 
     * { box-sizing: border-box; }
@@ -34,31 +33,32 @@
       font-family: "Inter", system-ui, -apple-system, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(65% 95% at 8% 5%, rgba(103, 212, 255, 0.2), transparent 55%),
-        radial-gradient(55% 80% at 92% 12%, rgba(139, 123, 255, 0.17), transparent 60%),
-        linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 55%, #090e1a 100%);
+        radial-gradient(65% 85% at 8% 8%, rgba(161, 212, 255, 0.38), transparent 58%),
+        radial-gradient(60% 95% at 94% 8%, rgba(166, 234, 218, 0.35), transparent 62%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 50%, var(--bg-soft) 100%);
       line-height: 1.6;
+      min-height: 100vh;
     }
 
     a { color: inherit; }
     h1, h2, h3, p { margin-top: 0; }
 
     .container {
-      width: min(1120px, 92vw);
+      width: min(1140px, 93vw);
       margin: 0 auto;
     }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
       border-bottom: 1px solid var(--line);
-      background: rgba(7, 12, 22, 0.72);
+      background: rgba(248, 252, 255, 0.78);
       backdrop-filter: blur(10px);
     }
 
     .nav-wrap {
-      min-height: 74px;
+      min-height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -69,265 +69,313 @@
       text-decoration: none;
       font-weight: 700;
       letter-spacing: -0.02em;
-      font-size: 1.02rem;
+      font-size: 1rem;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.1rem;
+      gap: 0.8rem;
       margin: 0;
       padding: 0;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--muted);
-      font-size: 0.92rem;
-      transition: color 0.2s ease;
+      font-size: 0.88rem;
+      padding: 0.4rem 0.7rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      transition: all 0.2s ease;
     }
 
-    .nav-links a:hover { color: var(--accent); }
-
-    section { padding: 5.2rem 0; }
-
-    .hero {
-      padding-top: 4.4rem;
-      padding-bottom: 3.3rem;
+    .nav-links a:hover {
+      color: var(--accent);
+      border-color: rgba(47, 133, 214, 0.25);
+      background: var(--accent-soft);
     }
 
-    .hero-shell {
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      background: linear-gradient(145deg, rgba(20, 30, 52, 0.9), rgba(11, 18, 34, 0.92));
-      box-shadow: var(--shadow), var(--glow);
-      padding: clamp(1.25rem, 2.8vw, 2.6rem);
+    main { padding: 2rem 0 4.4rem; }
+
+    .experience-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.8fr);
-      gap: 1.7rem;
+      gap: 1rem;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-areas:
+        "hero hero hero hero hero hero hero hero hero hero hero hero"
+        "works works works works works works interests interests interests interests interests interests"
+        "profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles";
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: clamp(1.1rem, 2.3vw, 2rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(255,255,255,0.4), transparent 42%);
+      pointer-events: none;
+    }
+
+    .hero-panel { grid-area: hero; }
+    .work-panel { grid-area: works; }
+    .interest-panel { grid-area: interests; }
+    .profile-panel { grid-area: profiles; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.52s ease, transform 0.58s ease;
+      transition-delay: var(--delay, 0s);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.78fr);
+      gap: 1rem;
       align-items: center;
     }
 
-    .eyebrow {
+    .overline {
+      margin-bottom: 0.55rem;
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-weight: 700;
       color: var(--accent);
-      margin-bottom: 0.6rem;
     }
 
     h1 {
-      font-size: clamp(2rem, 4.8vw, 3.8rem);
-      line-height: 1.05;
+      margin-bottom: 0.65rem;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.06;
       letter-spacing: -0.04em;
-      margin-bottom: 0.8rem;
       max-width: 12ch;
     }
 
-    .hero-intro {
+    .lead {
       margin: 0;
-      color: #c8d8f8;
-      max-width: 65ch;
-      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      color: #426282;
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+      max-width: 68ch;
     }
 
-    .hero-badges {
-      margin-top: 1.2rem;
+    .tagline-list {
+      margin-top: 0.95rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
-    .badge {
-      border: 1px solid rgba(103, 212, 255, 0.35);
-      color: #d8f4ff;
-      padding: 0.4rem 0.7rem;
+    .tag {
+      border: 1px solid rgba(47, 133, 214, 0.32);
+      background: rgba(255, 255, 255, 0.66);
+      color: #2e628f;
       border-radius: 999px;
-      font-size: 0.82rem;
-      background: rgba(103, 212, 255, 0.08);
+      padding: 0.34rem 0.65rem;
+      font-size: 0.81rem;
+      font-weight: 600;
     }
 
-    .hero-image-wrap {
-      border: 1px solid rgba(154, 172, 204, 0.25);
-      border-radius: 20px;
-      padding: 0.95rem;
-      background: rgba(17, 26, 43, 0.8);
+    .portrait-box {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.75);
+      padding: 0.8rem;
+      max-width: 310px;
       justify-self: end;
-      max-width: 340px;
-      width: 100%;
     }
 
-    .hero-image {
+    .portrait {
       width: 100%;
+      display: block;
+      border-radius: 11px;
       aspect-ratio: 4/5;
       object-fit: cover;
-      border-radius: 13px;
-      display: block;
-      border: 1px solid rgba(139, 123, 255, 0.4);
     }
 
-    .hero-caption {
-      margin: 0.65rem 0 0;
+    .caption {
+      margin: 0.55rem 0 0;
       color: var(--muted);
       font-size: 0.82rem;
     }
 
-    .section-shell {
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: rgba(16, 25, 43, 0.74);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      padding: clamp(1.2rem, 2.5vw, 2.2rem);
-    }
-
-    .section-header {
-      margin-bottom: 1.7rem;
-      max-width: 82ch;
-    }
-
-    h2 {
-      margin: 0 0 0.65rem;
-      font-size: clamp(1.5rem, 3.1vw, 2.2rem);
+    .section-title {
+      margin: 0 0 0.4rem;
+      font-size: clamp(1.3rem, 2.8vw, 1.85rem);
       letter-spacing: -0.02em;
     }
 
-    .section-copy {
+    .section-subtitle {
       margin: 0;
-      color: #bdd0f2;
-      font-size: 0.98rem;
+      color: #4f6f8e;
+      font-size: 0.95rem;
     }
 
-    .work-grid {
+    .horizontal-track {
+      margin-top: 1rem;
       display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 1rem;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(240px, 1fr);
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+      scroll-snap-type: x mandatory;
     }
 
-    .work-card {
-      grid-column: span 6;
-      border: 1px solid rgba(154, 172, 204, 0.27);
-      border-radius: var(--radius);
-      background: linear-gradient(170deg, rgba(21, 33, 55, 0.95), rgba(13, 21, 37, 0.9));
-      padding: 1.05rem;
+    .horizontal-track::-webkit-scrollbar { height: 8px; }
+    .horizontal-track::-webkit-scrollbar-thumb {
+      background: rgba(60, 106, 149, 0.28);
+      border-radius: 999px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--solid);
+      padding: 0.9rem;
       display: grid;
-      gap: 0.65rem;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      gap: 0.5rem;
+      scroll-snap-align: start;
+      min-height: 210px;
     }
 
-    .work-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(103, 212, 255, 0.5);
-    }
-
-    .work-card.featured { grid-column: span 12; }
-
-    .work-meta {
+    .card-meta {
       margin: 0;
-      font-size: 0.78rem;
       color: var(--accent);
+      font-size: 0.74rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .work-card h3 {
+    .card h3 {
       margin: 0;
-      font-size: 1.06rem;
+      font-size: 0.99rem;
       line-height: 1.35;
     }
 
-    .work-card p {
+    .card p {
       margin: 0;
-      color: #cad8f2;
-      font-size: 0.93rem;
+      color: #4f6d8c;
+      font-size: 0.9rem;
     }
 
-    .work-link {
+    .card-link {
       text-decoration: none;
-      color: #8fdbff;
+      color: #1f76c8;
+      font-size: 0.89rem;
       font-weight: 600;
       width: fit-content;
       font-size: 0.9rem;
     }
 
-    .work-link:hover { text-decoration: underline; }
+    .card-link:hover { text-decoration: underline; }
 
-    .interest-grid {
+    .interest-list {
+      margin-top: 1rem;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+      gap: 0.7rem;
     }
 
-    .interest-card {
-      border: 1px solid rgba(154, 172, 204, 0.24);
-      border-radius: var(--radius);
-      padding: 1.05rem;
-      background: rgba(15, 24, 40, 0.78);
+    .interest-item {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--solid);
+      padding: 0.9rem;
     }
 
-    .interest-card h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1rem;
+    .interest-item h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.98rem;
     }
 
-    .interest-card p {
+    .interest-item p {
       margin: 0;
-      color: #bfd0ee;
-      font-size: 0.92rem;
+      color: #4f6e8c;
+      font-size: 0.9rem;
     }
 
-    .profiles-strip {
+    .profile-row {
+      margin-top: 1rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0.8rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.7rem;
     }
 
-    .profile-link {
+    .profile-chip {
       text-decoration: none;
-      border: 1px solid rgba(154, 172, 204, 0.25);
+      border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 0.75rem;
+      background: var(--solid);
+      padding: 0.72rem;
       display: grid;
-      gap: 0.15rem;
-      background: rgba(13, 20, 34, 0.7);
+      gap: 0.12rem;
     }
 
-    .profile-link strong { font-size: 0.94rem; }
-    .profile-link span {
+    .profile-chip strong { font-size: 0.92rem; }
+    .profile-chip span {
       color: var(--muted);
-      font-size: 0.84rem;
+      font-size: 0.82rem;
     }
 
     .site-footer {
       border-top: 1px solid var(--line);
-      padding: 1.6rem 0 2.1rem;
+      padding: 1.5rem 0 2.2rem;
       color: var(--muted);
-      font-size: 0.86rem;
+      font-size: 0.85rem;
     }
 
     .site-footer p { margin: 0.15rem 0; }
 
     @media (max-width: 980px) {
-      .hero-shell { grid-template-columns: 1fr; }
-      .hero-image-wrap { justify-self: start; }
-      .work-card,
-      .work-card.featured { grid-column: span 12; }
-      .interest-grid { grid-template-columns: 1fr; }
+      .experience-grid {
+        grid-template-areas:
+          "hero hero hero hero hero hero hero hero hero hero hero hero"
+          "works works works works works works works works works works works works"
+          "interests interests interests interests interests interests interests interests interests interests interests interests"
+          "profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles";
+      }
+      .hero-layout { grid-template-columns: 1fr; }
+      .portrait-box { justify-self: start; }
+      .profile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 680px) {
-      section { padding: 4.4rem 0; }
       .nav-wrap {
         min-height: auto;
         padding: 0.8rem 0;
         flex-direction: column;
         align-items: flex-start;
       }
-      .nav-links { gap: 0.7rem; }
+      .nav-links { gap: 0.52rem; }
       h1 { max-width: none; }
+      .profile-row { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .horizontal-track { scroll-behavior: auto; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -344,107 +392,94 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top">Giovanni Nicolazzo</a>
-      <nav aria-label="Primary">
+      <nav aria-label="Navigazione principale">
         <ul class="nav-links">
-          <li><a href="#about">Profilo</a></li>
-          <li><a href="#work">Lavori svolti</a></li>
-          <li><a href="#interests">Interessi</a></li>
-          <li><a href="#profiles">Profili</a></li>
+          <li><a href="#about">Visione</a></li>
+          <li><a href="#works">Risultati</a></li>
+          <li><a href="#interests">Focus di ricerca</a></li>
+          <li><a href="#profiles">Profili ufficiali</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero" id="about">
-      <div class="container hero-shell">
-        <div>
-          <p class="eyebrow">Portfolio essenziale · solo risultati e focus</p>
-          <h1>Ricerca su controllo occulto e rischi nell’economia legale</h1>
-          <p class="hero-intro">Studio come attori criminali, sanzionati o ad alto rischio mantengono influenza tramite società, catene proprietarie e veicoli giuridici apparentemente regolari. Questo portfolio mostra soltanto ciò che ho realizzato e gli ambiti che approfondisco.</p>
-          <div class="hero-badges">
-            <span class="badge">Criminologia economica</span>
-            <span class="badge">Beneficial ownership</span>
-            <span class="badge">Sanctions circumvention</span>
-            <span class="badge">AML intelligence</span>
+    <div class="container experience-grid">
+      <section id="about" class="panel hero-panel reveal" style="--delay: 0s;">
+        <div class="hero-layout">
+          <div>
+            <p class="overline">One-page dinamica · chiara e rassicurante</p>
+            <h1>Analisi del controllo nascosto nell’economia lecita</h1>
+            <p class="lead">Questa piattaforma mostra esclusivamente risultati concreti e aree di interesse: una lettura immediata, ordinata e professionale delle attività di ricerca su criminalità economica, strutture proprietarie opache, sanzioni e AML.</p>
+            <div class="tagline-list">
+              <span class="tag">Criminologia economica</span>
+              <span class="tag">Beneficial ownership</span>
+              <span class="tag">Rischio sanzioni</span>
+              <span class="tag">AML intelligence</span>
+            </div>
+          </div>
+          <div class="portrait-box">
+            <img class="portrait" src="/authors/admin/I7JK6AxX_400x400.jpg" alt="Ritratto di Giovanni Nicolazzo" />
+            <p class="caption">Ricercatore presso Transcrime · Università Cattolica del Sacro Cuore (Milano).</p>
           </div>
         </div>
-        <div class="hero-image-wrap">
-          <img src="/authors/admin/I7JK6AxX_400x400.jpg" alt="Ritratto di Giovanni Nicolazzo" class="hero-image" />
-          <p class="hero-caption">Ricercatore presso Transcrime, Università Cattolica del Sacro Cuore (Milano).</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="work">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>Lavori svolti</h2>
-          <p class="section-copy">Selezione dei contributi principali tra pubblicazioni scientifiche e report applicati.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card featured">
-            <p class="work-meta">Journal article · 2026</p>
+      <section id="works" class="panel work-panel reveal" style="--delay: 0.08s;">
+        <h2 class="section-title">Risultati principali</h2>
+        <p class="section-subtitle">Scorri orizzontalmente per esplorare pubblicazioni e output applicativi.</p>
+        <div class="horizontal-track">
+          <article class="card reveal" style="--delay: 0.12s;">
+            <p class="card-meta">Journal article · 2026</p>
             <h3>On the enforcement of targeted sanctions: estimating the control of sanctioned Russian entities over European companies</h3>
-            <p>Metodologia replicabile per stimare il controllo di soggetti sanzionati su imprese europee, con indicatori operativi utili a individuare schemi di elusione.</p>
-            <a class="work-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener">Vai alla pubblicazione ↗</a>
+            <p>Metodo replicabile per stimare controllo societario e individuare indicatori operativi di elusione sanzionatoria.</p>
+            <a class="card-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener">Apri pubblicazione ↗</a>
           </article>
-
-          <article class="work-card">
-            <p class="work-meta">Journal article · 2025</p>
+          <article class="card reveal" style="--delay: 0.15s;">
+            <p class="card-meta">Journal article · 2025</p>
             <h3>Criminal participation in the legal economy during a health crisis</h3>
-            <p>Screening su dati aziendali italiani (2020–2021) per identificare pattern compatibili con partecipazione criminale nel tessuto legale.</p>
-            <a class="work-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">Vai alla pubblicazione ↗</a>
+            <p>Screening sul sistema economico italiano (2020–2021) per rilevare pattern compatibili con infiltrazione criminale.</p>
+            <a class="card-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">Apri pubblicazione ↗</a>
           </article>
-
-          <article class="work-card">
-            <p class="work-meta">Applied report · 2025</p>
+          <article class="card reveal" style="--delay: 0.18s;">
+            <p class="card-meta">Applied report · 2025</p>
             <h3>Schemes employed to circumvent sanctions</h3>
-            <p>Mappatura dei principali schemi di elusione delle sanzioni: intermediari, veicoli societari, giurisdizioni e indicatori di rischio.</p>
-            <a class="work-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener">Vai al report ↗</a>
+            <p>Mappatura di schemi ricorrenti, intermediari e veicoli societari usati per aggirare restrizioni sanzionatorie.</p>
+            <a class="card-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener">Apri report ↗</a>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="interests">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>Interessi di ricerca</h2>
-          <p class="section-copy">I temi su cui concentro analisi, metodi e sviluppo scientifico.</p>
-        </div>
-        <div class="interest-grid">
-          <article class="interest-card">
+      <section id="interests" class="panel interest-panel reveal" style="--delay: 0.1s;">
+        <h2 class="section-title">Focus di ricerca</h2>
+        <p class="section-subtitle">Ambiti su cui sviluppo analisi continuativa e metodologie applicate.</p>
+        <div class="interest-list">
+          <article class="interest-item reveal" style="--delay: 0.13s;">
             <h3>Infiltrazione criminale nei mercati legali</h3>
-            <p>Modalità di ingresso, consolidamento e estrazione di valore da parte di attori criminali in settori formalmente leciti.</p>
+            <p>Studio delle dinamiche di ingresso e consolidamento di attori criminali in settori formalmente leciti.</p>
           </article>
-          <article class="interest-card">
-            <h3>Assetti proprietari opachi</h3>
-            <p>Ricostruzione di catene di proprietà e controllo effettivo per rilevare concentrazione di rischio e opacità strategica.</p>
+          <article class="interest-item reveal" style="--delay: 0.16s;">
+            <h3>Strutture proprietarie opache</h3>
+            <p>Ricostruzione del controllo effettivo e analisi delle configurazioni che riducono trasparenza e accountability.</p>
           </article>
-          <article class="interest-card">
-            <h3>Rischio sanzioni e AML</h3>
-            <p>Adattamenti organizzativi e transazionali usati da soggetti ad alto rischio per preservare operatività e accesso economico.</p>
+          <article class="interest-item reveal" style="--delay: 0.19s;">
+            <h3>Strategie di adattamento a sanzioni e AML</h3>
+            <p>Valutazione dei comportamenti societari e transazionali adottati da soggetti ad alto rischio.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="profiles">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>Profili e tracciabilità scientifica</h2>
-          <p class="section-copy">Canali ufficiali per verificare output, affiliazione e identificatori di ricerca.</p>
+      <section id="profiles" class="panel profile-panel reveal" style="--delay: 0.12s;">
+        <h2 class="section-title">Profili ufficiali e verificabili</h2>
+        <p class="section-subtitle">Accesso diretto a fonti pubbliche per validare output, affiliazione e attività tecnica.</p>
+        <div class="profile-row">
+          <a class="profile-chip reveal" style="--delay: 0.15s;" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Produzione scientifica ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.18s;" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Identificatore autore ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.21s;" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Affiliazione istituzionale ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.24s;" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Repository e codice ↗</span></a>
         </div>
-        <div class="profiles-strip">
-          <a class="profile-link" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Pubblicazioni e citazioni ↗</span></a>
-          <a class="profile-link" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Identificatore di ricerca ↗</span></a>
-          <a class="profile-link" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Profilo istituzionale ↗</span></a>
-          <a class="profile-link" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Repository e codice ↗</span></a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -457,9 +492,8 @@
   <script>
     (function () {
       const nodes = document.querySelectorAll('.reveal');
-
       if (!('IntersectionObserver' in window)) {
-        nodes.forEach((el) => el.classList.add('visible'));
+        nodes.forEach((node) => node.classList.add('visible'));
         return;
       }
 
@@ -470,9 +504,9 @@
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.16, rootMargin: '0px 0px -34px 0px' });
 
-      nodes.forEach((el) => observer.observe(el));
+      nodes.forEach((node) => observer.observe(node));
     })();
   </script>
 </body>
