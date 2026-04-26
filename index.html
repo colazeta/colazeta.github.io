@@ -1,664 +1,583 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Research portfolio of Giovanni Nicolazzo on hidden control in the legal economy, spanning criminology, AML, beneficial ownership, and sanctions circumvention." />
   <meta name="author" content="Giovanni Nicolazzo" />
-  <title>Giovanni Nicolazzo</title>
+  <title>Giovanni Nicolazzo | Ricerca su infiltrazione criminale, opacità di mercato e rischio sanzioni/AML</title>
+  <meta name="description" content="Portfolio di ricerca di Giovanni Nicolazzo su infiltrazione criminale nell’economia legale, opacità societaria, catene proprietarie e rischio sanzioni/AML." />
+  <link rel="canonical" href="https://colazeta.github.io/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:title" content="Giovanni Nicolazzo | Research Portfolio" />
+  <meta property="og:description" content="Portfolio di ricerca su infiltrazione criminale nell’economia legale, opacità societaria, catene proprietarie e rischio sanzioni/AML." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://colazeta.github.io/" />
+  <meta property="og:image" content="https://colazeta.github.io/authors/admin/I7JK6AxX_400x400.jpg" />
+  <meta property="og:image:alt" content="Ritratto di Giovanni Nicolazzo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Giovanni Nicolazzo | Research Portfolio" />
+  <meta name="twitter:description" content="Ricerca su infiltrazione criminale, opacità di mercato, catene proprietarie e rischio sanzioni/AML." />
+  <meta name="twitter:image" content="https://colazeta.github.io/authors/admin/I7JK6AxX_400x400.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" />
   <link rel="icon" type="image/png" href="/media/image.png" />
   <style>
     :root {
-      --bg: #f4f6f9;
-      --surface: #ffffff;
-      --surface-soft: #f8fbff;
-      --text: #121722;
-      --muted: #4f5a6f;
-      --line: #d7dde6;
-      --line-strong: #c5cedc;
-      --accent: #174a8f;
-      --accent-soft: #e9f1fe;
-      --radius: 16px;
-      --radius-lg: 24px;
-      --shadow: 0 18px 44px rgba(16, 29, 52, 0.08);
+      --paper: #f8f4ec;
+      --paper-deep: #f0e9dd;
+      --surface: #fcfaf5;
+      --ink: #2d312f;
+      --ink-soft: #555f5a;
+      --line: rgba(56, 65, 61, 0.2);
+      --accent: #2f5953;
+      --accent-soft: rgba(47, 89, 83, 0.09);
+      --copper: #8e694f;
+      --radius: 14px;
+      --shadow: 0 14px 30px rgba(58, 50, 42, 0.08);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #f8fafd 0%, #f1f4f8 35%, #eef2f7 100%);
-      line-height: 1.65;
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, var(--paper) 0%, #f7f2e8 50%, var(--paper-deep) 100%);
+      line-height: 1.62;
     }
 
     h1, h2, h3, p { margin-top: 0; }
     a { color: inherit; }
 
-    .container {
-      width: min(1160px, 92vw);
-      margin: 0 auto;
-    }
+    .container { width: min(1380px, 96vw); margin: 0 auto; }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 20;
       border-bottom: 1px solid var(--line);
-      background: rgba(248, 250, 253, 0.94);
-      backdrop-filter: blur(10px);
+      background: rgba(248, 244, 236, 0.93);
+      backdrop-filter: blur(7px);
     }
 
     .nav-wrap {
-      min-height: 76px;
+      min-height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.8rem;
     }
 
     .brand {
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
+      letter-spacing: 0.01em;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 1.15rem;
+      gap: 0.62rem;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: var(--muted);
-      font-size: 0.93rem;
-      transition: color 0.2s ease;
+      color: var(--ink-soft);
+      font-size: 0.83rem;
+      padding: 0.3rem 0.54rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      transition: color 0.2s ease, border-color 0.2s ease;
     }
 
-    .nav-links a:hover { color: var(--accent); }
-
-    section { padding: 5.8rem 0; }
-    .section-divider { border-top: 1px solid var(--line); }
-
-    .section-shell {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: clamp(1.35rem, 2.2vw, 2.3rem);
-      box-shadow: 0 4px 20px rgba(16, 29, 52, 0.03);
+    .nav-links a:hover {
+      color: var(--accent);
+      border-color: rgba(47, 89, 83, 0.3);
     }
 
-    .section-header {
-      max-width: 80ch;
-      margin-bottom: 2.3rem;
-    }
+    main { padding: 1.25rem 0 3rem; }
 
-    .section-header h2 {
-      font-size: clamp(1.7rem, 3.2vw, 2.3rem);
-      line-height: 1.14;
-      letter-spacing: -0.025em;
-      margin-bottom: 0.8rem;
-    }
-
-    .section-copy {
-      margin: 0;
-      color: #2f3a4e;
-      max-width: 72ch;
-      font-size: 1.01rem;
-    }
-
-    .hero {
-      padding-top: 4.5rem;
-      padding-bottom: 4.3rem;
-    }
-
-    .hero-grid {
+    .experience-grid {
       display: grid;
-      gap: 2rem;
-      align-items: stretch;
-      grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.8fr);
-      background: radial-gradient(circle at 0% 0%, #fbfdff 0%, #f4f8ff 45%, #ffffff 100%);
-      border: 1px solid var(--line-strong);
-      border-radius: 28px;
-      padding: clamp(1.25rem, 2.6vw, 2.5rem);
-      box-shadow: var(--shadow);
+      gap: 0.75rem;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-areas:
+        "hero hero hero hero hero hero hero hero hero hero hero hero"
+        "works works works works works works interests interests interests interests interests interests"
+        "methods methods methods methods methods methods methods profiles profiles profiles profiles profiles";
     }
 
-    .hero-main { display: grid; gap: 0.85rem; }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: clamp(0.95rem, 1.5vw, 1.35rem);
+      position: relative;
+      overflow: hidden;
+    }
 
-    .eyebrow {
-      font-size: 0.76rem;
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(47, 89, 83, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(47, 89, 83, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .panel[data-number] .section-title {
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .panel[data-number] .section-title::before {
+      content: attr(data-number);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--copper);
+      font-family: "Inter", sans-serif;
+    }
+
+    .hero-panel { grid-area: hero; }
+    .work-panel { grid-area: works; }
+    .interest-panel { grid-area: interests; }
+    .method-panel { grid-area: methods; }
+    .profile-panel { grid-area: profiles; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      transition-delay: var(--delay, 0s);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.75fr);
+      gap: 1rem;
+      align-items: stretch;
+      position: relative;
+    }
+
+    .hero-layout::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 20%, rgba(47,89,83,0.18) 0 2px, transparent 3px),
+        radial-gradient(circle at 43% 56%, rgba(142,105,79,0.2) 0 2px, transparent 3px),
+        radial-gradient(circle at 78% 35%, rgba(47,89,83,0.18) 0 2px, transparent 3px),
+        linear-gradient(120deg, transparent 19%, rgba(47,89,83,0.14) 20%, transparent 21%),
+        linear-gradient(160deg, transparent 46%, rgba(142,105,79,0.14) 47%, transparent 48%);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .hero-layout > * { position: relative; z-index: 1; }
+
+    .overline {
+      margin-bottom: 0.4rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.12em;
       font-weight: 700;
       color: var(--accent);
-      margin-bottom: 0.15rem;
+    }
+
+    h1, .section-title, .card h3, .interest-item h3, .method-item h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
     }
 
     h1 {
-      font-size: clamp(2.25rem, 4.9vw, 3.8rem);
-      line-height: 1.06;
-      letter-spacing: -0.038em;
-      margin-bottom: 0.35rem;
-      max-width: 12ch;
+      margin-bottom: 0.56rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.04;
+      letter-spacing: 0;
+      max-width: 15ch;
     }
 
-    .hero-intro {
-      max-width: 64ch;
+    .lead {
       margin: 0;
-      font-size: clamp(1.04rem, 1.7vw, 1.22rem);
-      color: #253248;
+      color: #4f5b55;
+      font-size: clamp(0.97rem, 1.5vw, 1.08rem);
+      max-width: 78ch;
     }
 
-    .affiliation-line {
-      margin: 0.25rem 0 0;
-      color: var(--muted);
-      font-size: 0.97rem;
-      border-left: 3px solid #c6d8f5;
-      padding-left: 0.78rem;
-    }
+    .tagline-list { margin-top: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.45rem; }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.78rem;
-      margin-top: 0.3rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.3rem;
-      text-decoration: none;
-      border-radius: 12px;
-      font-size: 0.92rem;
-      font-weight: 600;
-      padding: 0.66rem 1.06rem;
-      border: 1px solid transparent;
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary {
-      background: #16253f;
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(20, 35, 62, 0.2);
-    }
-
-    .btn-primary:hover { background: #213153; }
-
-    .btn-secondary {
-      background: #ffffff;
-      border-color: #ccd6e5;
-      color: #1d2941;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent);
+    .tag {
+      border: 1px solid rgba(47, 89, 83, 0.35);
+      background: rgba(47, 89, 83, 0.05);
       color: var(--accent);
+      border-radius: 999px;
+      padding: 0.3rem 0.56rem;
+      font-size: 0.78rem;
+      font-weight: 600;
     }
 
-    .trust-strip {
-      margin: 0.3rem 0 0;
-      padding: 0.72rem 0.85rem;
-      border: 1px solid #d9e2f0;
+    .portrait-box {
+      border: 1px solid var(--line);
       border-radius: 12px;
-      background: #f7faff;
-      font-size: 0.88rem;
-      color: #38455e;
-    }
-
-    .hero-image-wrap {
-      border: 1px solid #d5dff0;
-      border-radius: 18px;
-      background: #fbfcff;
-      padding: 0.95rem;
-      max-width: 360px;
+      background: #f6f0e6;
+      padding: 0.7rem;
+      max-width: 335px;
       justify-self: end;
-      display: grid;
-      gap: 0.8rem;
-      align-content: start;
     }
 
-    .hero-image {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
+    .portrait { width: 100%; display: block; border-radius: 8px; aspect-ratio: 4/5; object-fit: cover; filter: saturate(0.86) contrast(1.02); }
+    .caption { margin: 0.5rem 0 0; color: var(--ink-soft); font-size: 0.8rem; }
+
+    .section-title { margin: 0 0 0.35rem; font-size: clamp(1.35rem, 2.4vw, 1.95rem); letter-spacing: 0; }
+    .section-subtitle { margin: 0; color: #5d6761; font-size: 0.91rem; }
+
+    .horizontal-track {
+      margin-top: 0.95rem;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(260px, 1fr);
+      gap: 0.72rem;
+      overflow-x: auto;
+      padding-bottom: 0.2rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .horizontal-track::-webkit-scrollbar { height: 7px; }
+    .horizontal-track::-webkit-scrollbar-thumb { background: rgba(56, 65, 61, 0.3); border-radius: 999px; }
+
+    .card {
+      border: 1px solid rgba(56, 65, 61, 0.24);
       border-radius: 12px;
-      display: block;
-    }
-
-    .hero-image-note {
-      margin: 0;
-      font-size: 0.82rem;
-      color: #4f5f7b;
-      border-top: 1px solid #dce4f1;
-      padding-top: 0.62rem;
-    }
-
-    .featured-grid {
+      background: #fffdf8;
+      padding: 0.82rem;
       display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1.6rem;
+      gap: 0.46rem;
+      scroll-snap-align: start;
+      min-height: 210px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
-    .featured-item {
-      grid-column: span 6;
-      border: 1px solid #d8e0ec;
-      border-radius: 15px;
-      padding: 1.15rem;
-      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    .card:hover {
+      border-color: rgba(47, 89, 83, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .card-meta {
+      margin: 0;
+      color: var(--copper);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .card h3 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+
+    .card p {
+      margin: 0;
+      color: #4f5f5a;
+      font-size: 0.88rem;
+      border-left: 2px solid rgba(47, 89, 83, 0.35);
+      padding-left: 0.55rem;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      width: fit-content;
+      border-bottom: 1px solid transparent;
+    }
+
+    .card-link:hover { border-bottom-color: var(--accent); }
+
+    .interest-list, .method-list {
+      margin-top: 0.9rem;
       display: grid;
       gap: 0.62rem;
     }
 
-    .featured-item.primary {
-      grid-column: span 12;
-      border-color: #c8d8ee;
-      background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
-    }
-
-    .item-meta {
-      font-size: 0.78rem;
-      letter-spacing: 0.02em;
-      color: #4d5e80;
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .featured-item h3 {
-      margin: 0;
-      font-size: 1.12rem;
-      line-height: 1.35;
-      letter-spacing: -0.01em;
-    }
-
-    .featured-item p {
-      margin: 0;
-      font-size: 0.94rem;
-      color: #334057;
-    }
-
-    .relevance-line {
-      padding-top: 0.25rem;
-      border-top: 1px solid #e1e7f1;
-      font-size: 0.87rem;
-      color: #3f4e69;
-    }
-
-    .highlight-link {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-      width: fit-content;
-    }
-
-    .highlight-link:hover { text-decoration: underline; }
-
-    .dual-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .pillar, .approach-card {
-      border: 1px solid #d9e1ed;
-      border-radius: 14px;
-      padding: 1.05rem;
-      background: #ffffff;
-    }
-
-    .pillar h3, .approach-card h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1rem;
-      letter-spacing: -0.01em;
-    }
-
-    .pillar p, .approach-card p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: #47546c;
-    }
-
-    .approach-grid {
-      display: grid;
+    .method-list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
     }
 
-    .profile-shell {
-      background: #ffffff;
-      border: 1px solid #d8dfe9;
-      border-radius: 16px;
-      padding: 1.5rem;
-      display: grid;
-      gap: 0.95rem;
-      max-width: 84ch;
+    .method-item:last-child {
+      grid-column: span 2;
     }
 
-    .profile-shell p {
-      margin: 0;
-      color: #2e3a50;
-      font-size: 0.98rem;
-    }
-
-    .thesis-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      width: fit-content;
-    }
-
-    .thesis-link:hover { text-decoration: underline; }
-
-    .profiles-strip {
-      border: 1px solid #d5deea;
-      background: #f7faff;
-      border-radius: 16px;
-      padding: 1rem;
-      display: grid;
-      gap: 0.75rem;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .profile-link {
-      text-decoration: none;
-      border: 1px solid #dbe4f0;
+    .interest-item, .method-item {
+      border: 1px solid rgba(56,65,61,0.25);
       border-radius: 11px;
-      padding: 0.75rem;
-      background: #ffffff;
+      background: #fffdf8;
+      padding: 0.78rem;
+      position: relative;
+    }
+
+    .interest-item::before,
+    .method-item::before {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba(47,89,83,0.4);
+      border-radius: 3px;
+      opacity: 0.55;
+    }
+
+    .interest-item h3, .method-item h3 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+    .interest-item p, .method-item p { margin: 0; color: #56645f; font-size: 0.88rem; }
+
+    .profile-row {
+      margin-top: 0.9rem;
       display: grid;
-      gap: 0.15rem;
-      min-height: 84px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      grid-template-columns: 1fr;
+      gap: 0.62rem;
     }
 
-    .profile-link:hover {
-      border-color: #aac3ea;
-      transform: translateY(-2px);
-    }
-
-    .profile-link strong {
-      font-size: 0.93rem;
-      color: #1f2b44;
-    }
-
-    .profile-link span {
-      font-size: 0.83rem;
-      color: #586682;
-    }
-
-    .contact-shell {
-      background: linear-gradient(180deg, #f7fbff 0%, #fefefe 100%);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .contact-card {
-      border: 1px solid #d7dfeb;
-      border-radius: 14px;
-      padding: 1rem;
-      background: #ffffff;
-    }
-
-    .contact-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 0.55rem;
-      font-size: 0.93rem;
-      color: #2f3a4c;
-    }
-
-    .contact-list a {
-      color: var(--accent);
+    .profile-chip {
       text-decoration: none;
+      border: 1px solid rgba(56,65,61,0.26);
+      border-radius: 10px;
+      background: #fffdf8;
+      padding: 0.66rem;
+      display: grid;
+      gap: 0.08rem;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
     }
 
-    .contact-list a:hover { text-decoration: underline; }
+    .profile-chip:hover {
+      border-color: rgba(47,89,83,0.5);
+      background: #fffaf1;
+    }
+
+    .profile-chip strong { font-size: 0.9rem; }
+    .profile-chip span { color: var(--ink-soft); font-size: 0.8rem; }
 
     .site-footer {
       border-top: 1px solid var(--line);
-      padding: 1.6rem 0 2rem;
-      color: var(--muted);
-      font-size: 0.87rem;
+      padding: 1.3rem 0 2rem;
+      color: var(--ink-soft);
+      font-size: 0.83rem;
     }
 
-    .site-footer p { margin: 0.2rem 0; }
+    .site-footer p { margin: 0.14rem 0; }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
 
     @media (max-width: 980px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-image-wrap {
-        justify-self: start;
-        max-width: 390px;
+      .experience-grid {
+        grid-template-areas:
+          "hero hero hero hero hero hero hero hero hero hero hero hero"
+          "works works works works works works works works works works works works"
+          "interests interests interests interests interests interests interests interests interests interests interests interests"
+          "methods methods methods methods methods methods methods methods methods methods methods methods"
+          "profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles";
       }
-      .featured-item,
-      .featured-item.primary,
-      .dual-grid,
-      .approach-grid,
-      .contact-grid {
-        grid-column: auto;
-        grid-template-columns: 1fr;
-      }
-      .featured-item,
-      .featured-item.primary {
-        grid-column: span 12;
-      }
-      .dual-grid { grid-template-columns: 1fr; }
+
+      .hero-layout { grid-template-columns: 1fr; }
+      .portrait-box { justify-self: start; }
+      .method-list { grid-template-columns: 1fr; }
+      .method-item:last-child { grid-column: auto; }
     }
 
-    @media (max-width: 660px) {
-      section { padding: 4.4rem 0; }
-      .hero { padding-top: 3.6rem; }
+    @media (max-width: 680px) {
       .nav-wrap {
         min-height: auto;
-        padding: 0.75rem 0;
+        padding: 0.72rem 0;
         flex-direction: column;
         align-items: flex-start;
       }
-      .nav-links { gap: 0.8rem; }
-      .hero-grid { border-radius: 20px; }
+
+      .nav-links { gap: 0.45rem; }
       h1 { max-width: none; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://colazeta.github.io/",
+    "name": "Giovanni Nicolazzo · Research Portfolio",
+    "inLanguage": "it",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Giovanni Nicolazzo",
+      "jobTitle": "Ricercatore",
+      "url": "https://colazeta.github.io/",
+      "image": "https://colazeta.github.io/authors/admin/I7JK6AxX_400x400.jpg",
+      "worksFor": [
+        {"@type": "Organization", "name": "Transcrime"},
+        {"@type": "Organization", "name": "Università Cattolica del Sacro Cuore"}
+      ],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=5zc-vxQAAAAJ",
+        "https://orcid.org/0000-0002-5551-2682",
+        "https://www.transcrime.it/en/people/giovanni-nicolazzo/",
+        "https://github.com/colazeta"
+      ],
+      "knowsAbout": [
+        "infiltrazione criminale nell’economia legale",
+        "opacità di mercato",
+        "catene proprietarie",
+        "rischio sanzioni",
+        "rischio AML",
+        "beneficial ownership",
+        "network analysis",
+        "risk indicator design"
+      ],
+      "subjectOf": [
+        "https://journals.sagepub.com/doi/abs/10.1177/14773708251381914",
+        "https://www.sciencedirect.com/science/article/pii/S2949791425000314",
+        "https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/"
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top">Giovanni Nicolazzo</a>
-      <nav aria-label="Primary">
+      <nav aria-label="Navigazione principale">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#featured">Featured work</a></li>
-          <li><a href="#domains">Research domains</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#profiles">Profiles</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Profilo di ricerca</a></li>
+          <li><a href="#works">Pubblicazioni selezionate</a></li>
+          <li><a href="#interests">Aree di studio</a></li>
+          <li><a href="#methods">Metodi analitici</a></li>
+          <li><a href="#profiles">Profili istituzionali</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero" id="about">
-      <div class="container hero-grid">
-        <div class="hero-main">
-          <p class="eyebrow">Criminology · financial crime · AML relevance</p>
-          <h1>Investigating hidden control in the legal economy</h1>
-          <p class="hero-intro">I study how criminal, sanctioned, and high-risk actors preserve influence through firms, ownership chains, and legal vehicles that appear compliant while concealing who controls what.</p>
-          <p class="affiliation-line">Researcher at Transcrime, Università Cattolica del Sacro Cuore (Milan).</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#featured">Explore featured work</a>
-            <a class="btn btn-secondary" href="#contact">Work with me</a>
+    <div class="container experience-grid">
+      <section id="about" class="panel hero-panel reveal" style="--delay: 0s;" data-number="00">
+        <div class="hero-layout">
+          <div>
+            <p class="overline">Research portfolio · criminal infiltration and market opacity</p>
+            <h1>Ricerca su infiltrazione criminale nell’economia legale e opacità dei mercati</h1>
+            <p class="lead">Studio come attori criminali, sanzionati e ad alto rischio entrano, usano e distorcono sistemi economici leciti tramite imprese, catene proprietarie, intermediari professionali, reti di procurement e canali finanziari che possono nascondere influenza illecita, dipendenza economica o forme dannose di controllo.</p>
+            <div class="tagline-list">
+              <span class="tag">Infiltrazione criminale</span>
+              <span class="tag">Corporate opacity</span>
+              <span class="tag">Ownership chains</span>
+              <span class="tag">Sanctions & AML risk</span>
+            </div>
           </div>
-          <p class="trust-strip">Recent work covers beneficial ownership opacity, sanction circumvention patterns, and criminal infiltration in lawful markets, with outputs spanning peer-reviewed research and applied policy analysis.</p>
+          <div class="portrait-box">
+            <img class="portrait" src="/authors/admin/I7JK6AxX_400x400.jpg" alt="Ritratto di Giovanni Nicolazzo" width="400" height="400" decoding="async" fetchpriority="high" />
+            <p class="caption">Ricercatore, Transcrime · Università Cattolica del Sacro Cuore (Milano).</p>
+          </div>
         </div>
-        <div class="hero-image-wrap">
-          <img src="/authors/admin/I7JK6AxX_400x400.jpg" alt="Portrait of Giovanni Nicolazzo" class="hero-image" />
-          <p class="hero-image-note">Research across criminology and applied AML analysis, combining structured data, ownership reconstruction, and case-based evidence.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="featured" class="section-divider">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>Featured work</h2>
-          <p class="section-copy">Selected outputs that best represent both scholarly contribution and applied relevance for AML, sanctions, and integrity risk analysis.</p>
-        </div>
-        <div class="featured-grid">
-          <article class="featured-item primary">
-            <p class="item-meta">Journal article · 2026</p>
-            <h3>On the enforcement of targeted sanctions: Estimating the control of sanctioned Russian entities over European companies and proposing a methodology to detect sanction circumvention</h3>
-            <p>Develops a replicable methodology to estimate control by sanctioned Russian entities over European firms, linking ownership structures to observable circumvention risk patterns.</p>
-            <p class="relevance-line"><strong>Relevance:</strong> Provides an operational bridge between sanctions policy and company-level control analysis.</p>
-            <a class="highlight-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener">View publication ↗</a>
+      <section id="works" class="panel work-panel reveal" style="--delay: 0.08s;" data-number="01" aria-labelledby="works-title">
+        <h2 id="works-title" class="section-title">Pubblicazioni selezionate</h2>
+        <p class="section-subtitle">Output scientifici e applicativi rilevanti per sanctions enforcement, rischio economico e trasparenza societaria.</p>
+        <div class="horizontal-track">
+          <article class="card reveal" style="--delay: 0.12s;" data-type="Journal article" data-year="2026">
+            <p class="card-meta">Journal article · 2026</p>
+            <h3>On the enforcement of targeted sanctions: estimating the control of sanctioned Russian entities over European companies</h3>
+            <p>Proposta metodologica per stimare il controllo effettivo di soggetti sanzionati su imprese europee e individuare segnali di circumvention.</p>
+            <a class="card-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener noreferrer external">Apri articolo ↗</a>
           </article>
-
-          <article class="featured-item">
-            <p class="item-meta">Journal article · 2025</p>
-            <h3>Criminal participation in the legal economy during a health crisis: A screening of the Italian economy during 2020 and 2021</h3>
-            <p>Uses proxy-based screening on economy-wide business data to identify potential criminal participation in Italian firms during the Covid-19 period.</p>
-            <p class="relevance-line"><strong>Relevance:</strong> Shows how market-wide screening can support early detection of high-risk corporate exposure.</p>
-            <a class="highlight-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">View publication ↗</a>
+          <article class="card reveal" style="--delay: 0.15s;" data-type="Journal article" data-year="2025">
+            <p class="card-meta">Journal article · 2025</p>
+            <h3>Criminal participation in the legal economy during a health crisis</h3>
+            <p>Screening dell’economia italiana (2020–2021) per identificare pattern compatibili con partecipazione criminale nel tessuto d’impresa.</p>
+            <a class="card-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener noreferrer external">Apri articolo ↗</a>
           </article>
-
-          <article class="featured-item">
-            <p class="item-meta">Applied report · 2025</p>
+          <article class="card reveal" style="--delay: 0.18s;" data-type="Applied report" data-year="2025">
+            <p class="card-meta">Applied report · 2025</p>
             <h3>Schemes employed to circumvent sanctions</h3>
-            <p>Maps recurrent sanction-circumvention schemes, including facilitators, corporate vehicles, jurisdictions, and practical indicators of risk.</p>
-            <p class="relevance-line"><strong>Relevance:</strong> Translates empirical research into applied intelligence for sanctions and compliance practice.</p>
-            <a class="highlight-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener">View report ↗</a>
+            <p>Mappatura di schemi ricorrenti di elusione con focus su intermediari, strutture societarie e indicatori di rischio operativo.</p>
+            <a class="card-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener noreferrer external">Apri report ↗</a>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="domains" class="section-divider">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>Research domains</h2>
-          <p class="section-copy">A focused agenda on how influence is concealed and exercised through legal-economic structures.</p>
-        </div>
-        <div class="dual-grid">
-          <article class="pillar">
-            <h3>Criminal infiltration in the legal economy</h3>
-            <p>How criminal actors enter legitimate sectors, stabilise their position, and extract value through companies and market participation.</p>
+      <section id="interests" class="panel interest-panel reveal" style="--delay: 0.1s;" data-number="02" aria-labelledby="interests-title">
+        <h2 id="interests-title" class="section-title">Aree di studio</h2>
+        <p class="section-subtitle">Temi centrali per comprendere come il rischio opaco prende forma in strutture apparentemente lecite.</p>
+        <div class="interest-list">
+          <article class="interest-item reveal" style="--delay: 0.13s;">
+            <h3>Infiltrazione criminale nell’economia legale</h3>
+            <p>Traiettorie di ingresso, consolidamento e distorsione competitiva nei mercati leciti.</p>
           </article>
-          <article class="pillar">
-            <h3>Beneficial ownership and concealed control</h3>
-            <p>How ownership chains, nominee arrangements, and legal vehicles are used to mask control, reduce transparency, and weaken accountability.</p>
+          <article class="interest-item reveal" style="--delay: 0.16s;">
+            <h3>Opacità in organizzazioni e strutture societarie</h3>
+            <p>Assetti formali che occultano influenza, dipendenze economiche o catene di controllo indirette.</p>
           </article>
-          <article class="pillar">
-            <h3>Sanction circumvention and AML risk analysis</h3>
-            <p>How sanctioned and high-risk actors adapt corporate structures and transactions to preserve access, influence, and operational reach.</p>
+          <article class="interest-item reveal" style="--delay: 0.19s;">
+            <h3>Reti di intermediazione e canali finanziari</h3>
+            <p>Ruolo di intermediari, procurement e flussi economici nel sostenere dinamiche ad alto rischio.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="approach" class="section-divider">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>How I work</h2>
-          <p class="section-copy">An analytical approach combining structured data work with case-led criminological interpretation.</p>
-        </div>
-        <div class="approach-grid">
-          <article class="approach-card">
-            <h3>Ownership-chain reconstruction</h3>
-            <p>Systematic tracing of direct and indirect ownership links across firms and jurisdictions to estimate control structures.</p>
+      <section id="methods" class="panel method-panel reveal" style="--delay: 0.12s;" data-number="03" aria-labelledby="methods-title">
+        <h2 id="methods-title" class="section-title">Metodi analitici</h2>
+        <p class="section-subtitle">Integrazione di teoria criminologica e metodi empirici per rendere il rischio opaco più visibile, misurabile e intelligibile.</p>
+        <div class="method-list">
+          <article class="method-item reveal" style="--delay: 0.15s;">
+            <h3>Teoria criminologica + dati strutturati</h3>
+            <p>Uso congiunto di cornici teoriche e basi dati per interpretare meccanismi di controllo non trasparente.</p>
           </article>
-          <article class="approach-card">
-            <h3>Beneficial ownership analysis</h3>
-            <p>Assessment of declared and inferred beneficial ownership patterns to identify opacity, concentration, and screening priorities.</p>
+          <article class="method-item reveal" style="--delay: 0.18s;">
+            <h3>Network methods e ownership reconstruction</h3>
+            <p>Ricostruzione di relazioni societarie e catene proprietarie per stimare influenza diretta e indiretta.</p>
           </article>
-          <article class="approach-card">
-            <h3>Proxy-based screening and network analysis</h3>
-            <p>Use of indicators and relational mapping to surface anomalous structures, intermediaries, and clustered risk configurations.</p>
-          </article>
-          <article class="approach-card">
-            <h3>Case-based and documentary research</h3>
-            <p>Integration of judicial, regulatory, and policy material to interpret mechanisms behind quantitative patterns.</p>
+          <article class="method-item reveal" style="--delay: 0.21s;">
+            <h3>Case-based research e risk indicator design</h3>
+            <p>Sviluppo di indicatori operativi e interpretazione caso per caso per supportare analisi di rischio applicate.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="profile" class="section-divider">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>Profile</h2>
+      <section id="profiles" class="panel profile-panel reveal" style="--delay: 0.14s;" data-number="04" aria-labelledby="profiles-title">
+        <h2 id="profiles-title" class="section-title">Profili istituzionali e scientifici</h2>
+        <p class="section-subtitle">Tracciabilità pubblica di pubblicazioni, identificatori di ricerca e attività tecnica.</p>
+        <div class="profile-row">
+          <a class="profile-chip reveal" style="--delay: 0.17s;" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener noreferrer external"><strong>Google Scholar</strong><span>Pubblicazioni e citazioni ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.2s;" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener noreferrer external"><strong>ORCID</strong><span>Identificatore autore ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.23s;" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener noreferrer external"><strong>Transcrime</strong><span>Profilo istituzionale ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.26s;" href="https://github.com/colazeta" target="_blank" rel="noopener noreferrer external"><strong>GitHub</strong><span>Repository tecnico ↗</span></a>
         </div>
-        <div class="profile-shell">
-          <p>I am a criminology researcher working at the intersection of organised crime, financial crime, and corporate opacity, with a focus on hidden control in lawful markets.</p>
-          <p>I completed a PhD in Criminology at Università Cattolica del Sacro Cuore (Milan) in 2025. My research combines scholarly inquiry with applied work relevant to AML, sanctions, and policy stakeholders.</p>
-          <p>Previous training includes an MSc (cum laude) in Public Policies, specialising in Security Policies (2021), and a BSc (cum laude) in Statistical Sciences at the University of Bologna (2019).</p>
-          <a class="thesis-link" href="https://tesidottorato.depositolegale.it/handle/20.500.14242/201543" target="_blank" rel="noopener">View doctoral thesis record ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="profiles" class="section-divider">
-      <div class="container section-shell">
-        <div class="section-header">
-          <h2>External profiles</h2>
-          <p class="section-copy">Publication record, institutional context, and professional channels.</p>
-        </div>
-        <div class="profiles-strip">
-          <a class="profile-link" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Publication and citation record ↗</span></a>
-          <a class="profile-link" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Research identifier ↗</span></a>
-          <a class="profile-link" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Institutional profile ↗</span></a>
-          <a class="profile-link" href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional profile ↗</span></a>
-          <a class="profile-link" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Technical work ↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section-divider">
-      <div class="container section-shell contact-shell">
-        <div class="section-header">
-          <h2>Work with me</h2>
-          <p class="section-copy">I welcome enquiries on research collaborations, invited talks, workshops, expert contributions, and project-related work on corporate opacity, beneficial ownership, and sanctions risk.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Primary contact</h3>
-            <ul class="contact-list">
-              <li>Email: <a href="mailto:giovanni.nicolazzo@unicatt.it">giovanni.nicolazzo@unicatt.it</a></li>
-              <li>LinkedIn: <a href="https://www.linkedin.com/in/giovanni-nicolazzo/" target="_blank" rel="noopener">/in/giovanni-nicolazzo</a></li>
-            </ul>
-          </div>
-          <div class="contact-card">
-            <h3>Additional links</h3>
-            <ul class="contact-list">
-              <li>ORCID: <a href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener">0000-0002-5551-2682</a></li>
-              <li>GitHub: <a href="https://github.com/colazeta" target="_blank" rel="noopener">github.com/colazeta</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -667,5 +586,26 @@
       <p><a href="/privacy/">Privacy</a> · <a href="/terms/">Website notice</a></p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const nodes = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        nodes.forEach((node) => node.classList.add('visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -20px 0px' });
+
+      nodes.forEach((node) => observer.observe(node));
+    })();
+  </script>
 </body>
 </html>
