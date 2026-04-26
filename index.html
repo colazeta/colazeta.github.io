@@ -24,6 +24,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" />
   <link rel="icon" type="image/png" href="/media/image.png" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY0S1T8PYZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PY0S1T8PYZ');
+  </script>
   <style>
     :root {
       --paper: #f8f4ec;
@@ -452,6 +461,15 @@
         transition: none;
       }
       .horizontal-track { scroll-behavior: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
