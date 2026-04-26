@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Portfolio di Giovanni Nicolazzo: lavori realizzati e interessi di ricerca in un'esperienza one-page dinamica." />
+  <meta name="description" content="Giovanni Nicolazzo: ricerca su infiltrazione criminale nell'economia legale, opacità societaria, catene proprietarie e rischio sanzioni/AML." />
   <meta name="author" content="Giovanni Nicolazzo" />
-  <title>Giovanni Nicolazzo · Portfolio</title>
+  <title>Giovanni Nicolazzo · Research Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
@@ -14,14 +14,14 @@
   <style>
     :root {
       --bg: #f4f8fc;
-      --bg-soft: #e8f0f7;
-      --surface: rgba(255, 255, 255, 0.86);
+      --bg-soft: #e9f1f8;
+      --surface: rgba(255, 255, 255, 0.88);
       --solid: #ffffff;
-      --text: #1b3554;
-      --muted: #5d7691;
-      --line: rgba(84, 124, 161, 0.2);
-      --accent: #2f85d6;
-      --accent-soft: rgba(47, 133, 214, 0.12);
+      --text: #1a3553;
+      --muted: #5a7592;
+      --line: rgba(82, 122, 160, 0.2);
+      --accent: #2d84d6;
+      --accent-soft: rgba(45, 132, 214, 0.11);
       --radius: 20px;
       --shadow: 0 18px 44px rgba(22, 60, 99, 0.12);
     }
@@ -33,27 +33,23 @@
       font-family: "Inter", system-ui, -apple-system, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(65% 85% at 8% 8%, rgba(161, 212, 255, 0.38), transparent 58%),
-        radial-gradient(60% 95% at 94% 8%, rgba(166, 234, 218, 0.35), transparent 62%),
+        radial-gradient(68% 86% at 8% 8%, rgba(160, 212, 255, 0.35), transparent 58%),
+        radial-gradient(62% 95% at 94% 8%, rgba(166, 234, 218, 0.32), transparent 62%),
         linear-gradient(180deg, #f8fbff 0%, var(--bg) 50%, var(--bg-soft) 100%);
       line-height: 1.6;
-      min-height: 100vh;
     }
 
     a { color: inherit; }
     h1, h2, h3, p { margin-top: 0; }
 
-    .container {
-      width: min(1140px, 93vw);
-      margin: 0 auto;
-    }
+    .container { width: min(1140px, 93vw); margin: 0 auto; }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 20;
       border-bottom: 1px solid var(--line);
-      background: rgba(248, 252, 255, 0.78);
+      background: rgba(248, 252, 255, 0.8);
       backdrop-filter: blur(10px);
     }
 
@@ -65,17 +61,12 @@
       gap: 1rem;
     }
 
-    .brand {
-      text-decoration: none;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      font-size: 1rem;
-    }
+    .brand { text-decoration: none; font-weight: 700; letter-spacing: -0.02em; font-size: 1rem; }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 0.8rem;
+      gap: 0.75rem;
       margin: 0;
       padding: 0;
       flex-wrap: wrap;
@@ -84,8 +75,8 @@
     .nav-links a {
       text-decoration: none;
       color: var(--muted);
-      font-size: 0.88rem;
-      padding: 0.4rem 0.7rem;
+      font-size: 0.87rem;
+      padding: 0.38rem 0.66rem;
       border: 1px solid transparent;
       border-radius: 999px;
       transition: all 0.2s ease;
@@ -93,7 +84,7 @@
 
     .nav-links a:hover {
       color: var(--accent);
-      border-color: rgba(47, 133, 214, 0.25);
+      border-color: rgba(45, 132, 214, 0.26);
       background: var(--accent-soft);
     }
 
@@ -106,7 +97,7 @@
       grid-template-areas:
         "hero hero hero hero hero hero hero hero hero hero hero hero"
         "works works works works works works interests interests interests interests interests interests"
-        "profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles";
+        "methods methods methods methods methods methods methods profiles profiles profiles profiles profiles";
     }
 
     .panel {
@@ -130,6 +121,7 @@
     .hero-panel { grid-area: hero; }
     .work-panel { grid-area: works; }
     .interest-panel { grid-area: interests; }
+    .method-panel { grid-area: methods; }
     .profile-panel { grid-area: profiles; }
 
     .reveal {
@@ -139,10 +131,7 @@
       transition-delay: var(--delay, 0s);
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     .hero-layout {
       display: grid;
@@ -162,76 +151,51 @@
 
     h1 {
       margin-bottom: 0.65rem;
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-size: clamp(2rem, 4.5vw, 3.35rem);
       line-height: 1.06;
       letter-spacing: -0.04em;
-      max-width: 12ch;
+      max-width: 14ch;
     }
 
     .lead {
       margin: 0;
-      color: #426282;
+      color: #3f607f;
       font-size: clamp(1rem, 1.7vw, 1.15rem);
-      max-width: 68ch;
+      max-width: 75ch;
     }
 
-    .tagline-list {
-      margin-top: 0.95rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+    .tagline-list { margin-top: 0.95rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
     .tag {
-      border: 1px solid rgba(47, 133, 214, 0.32);
-      background: rgba(255, 255, 255, 0.66);
-      color: #2e628f;
+      border: 1px solid rgba(45, 132, 214, 0.32);
+      background: rgba(255, 255, 255, 0.68);
+      color: #2d628f;
       border-radius: 999px;
       padding: 0.34rem 0.65rem;
-      font-size: 0.81rem;
+      font-size: 0.8rem;
       font-weight: 600;
     }
 
     .portrait-box {
       border: 1px solid var(--line);
       border-radius: 16px;
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.76);
       padding: 0.8rem;
       max-width: 310px;
       justify-self: end;
     }
 
-    .portrait {
-      width: 100%;
-      display: block;
-      border-radius: 11px;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-    }
+    .portrait { width: 100%; display: block; border-radius: 11px; aspect-ratio: 4/5; object-fit: cover; }
+    .caption { margin: 0.55rem 0 0; color: var(--muted); font-size: 0.82rem; }
 
-    .caption {
-      margin: 0.55rem 0 0;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    .section-title {
-      margin: 0 0 0.4rem;
-      font-size: clamp(1.3rem, 2.8vw, 1.85rem);
-      letter-spacing: -0.02em;
-    }
-
-    .section-subtitle {
-      margin: 0;
-      color: #4f6f8e;
-      font-size: 0.95rem;
-    }
+    .section-title { margin: 0 0 0.42rem; font-size: clamp(1.28rem, 2.8vw, 1.83rem); letter-spacing: -0.02em; }
+    .section-subtitle { margin: 0; color: #4f6f8e; font-size: 0.94rem; }
 
     .horizontal-track {
       margin-top: 1rem;
       display: grid;
       grid-auto-flow: column;
-      grid-auto-columns: minmax(240px, 1fr);
+      grid-auto-columns: minmax(250px, 1fr);
       gap: 0.75rem;
       overflow-x: auto;
       padding-bottom: 0.25rem;
@@ -239,10 +203,7 @@
     }
 
     .horizontal-track::-webkit-scrollbar { height: 8px; }
-    .horizontal-track::-webkit-scrollbar-thumb {
-      background: rgba(60, 106, 149, 0.28);
-      border-radius: 999px;
-    }
+    .horizontal-track::-webkit-scrollbar-thumb { background: rgba(60, 106, 149, 0.28); border-radius: 999px; }
 
     .card {
       border: 1px solid var(--line);
@@ -255,67 +216,33 @@
       min-height: 210px;
     }
 
-    .card-meta {
-      margin: 0;
-      color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 0.99rem;
-      line-height: 1.35;
-    }
-
-    .card p {
-      margin: 0;
-      color: #4f6d8c;
-      font-size: 0.9rem;
-    }
-
-    .card-link {
-      text-decoration: none;
-      color: #1f76c8;
-      font-size: 0.89rem;
-      font-weight: 600;
-      width: fit-content;
-      font-size: 0.9rem;
-    }
-
+    .card-meta { margin: 0; color: var(--accent); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+    .card h3 { margin: 0; font-size: 0.98rem; line-height: 1.35; }
+    .card p { margin: 0; color: #4f6d8c; font-size: 0.9rem; }
+    .card-link { text-decoration: none; color: #1f76c8; font-size: 0.89rem; font-weight: 600; width: fit-content; }
     .card-link:hover { text-decoration: underline; }
 
-    .interest-list {
+    .interest-list, .method-list {
       margin-top: 1rem;
       display: grid;
-      gap: 0.7rem;
+      gap: 0.68rem;
     }
 
-    .interest-item {
+    .interest-item, .method-item {
       border: 1px solid var(--line);
       border-radius: 14px;
       background: var(--solid);
       padding: 0.9rem;
     }
 
-    .interest-item h3 {
-      margin: 0 0 0.35rem;
-      font-size: 0.98rem;
-    }
-
-    .interest-item p {
-      margin: 0;
-      color: #4f6e8c;
-      font-size: 0.9rem;
-    }
+    .interest-item h3, .method-item h3 { margin: 0 0 0.35rem; font-size: 0.97rem; }
+    .interest-item p, .method-item p { margin: 0; color: #4f6e8c; font-size: 0.9rem; }
 
     .profile-row {
       margin-top: 1rem;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.7rem;
+      grid-template-columns: 1fr;
+      gap: 0.68rem;
     }
 
     .profile-chip {
@@ -329,10 +256,7 @@
     }
 
     .profile-chip strong { font-size: 0.92rem; }
-    .profile-chip span {
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
+    .profile-chip span { color: var(--muted); font-size: 0.82rem; }
 
     .site-footer {
       border-top: 1px solid var(--line);
@@ -349,11 +273,11 @@
           "hero hero hero hero hero hero hero hero hero hero hero hero"
           "works works works works works works works works works works works works"
           "interests interests interests interests interests interests interests interests interests interests interests interests"
+          "methods methods methods methods methods methods methods methods methods methods methods methods"
           "profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles";
       }
       .hero-layout { grid-template-columns: 1fr; }
       .portrait-box { justify-self: start; }
-      .profile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 680px) {
@@ -363,7 +287,7 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .nav-links { gap: 0.52rem; }
+      .nav-links { gap: 0.5rem; }
       h1 { max-width: none; }
       .profile-row { grid-template-columns: 1fr; }
     }
@@ -386,6 +310,16 @@
         transition: none;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .horizontal-track { scroll-behavior: auto; }
+    }
   </style>
 </head>
 <body>
@@ -394,10 +328,11 @@
       <a class="brand" href="#top">Giovanni Nicolazzo</a>
       <nav aria-label="Navigazione principale">
         <ul class="nav-links">
-          <li><a href="#about">Visione</a></li>
-          <li><a href="#works">Risultati</a></li>
-          <li><a href="#interests">Focus di ricerca</a></li>
-          <li><a href="#profiles">Profili ufficiali</a></li>
+          <li><a href="#about">Profilo di ricerca</a></li>
+          <li><a href="#works">Pubblicazioni selezionate</a></li>
+          <li><a href="#interests">Aree di studio</a></li>
+          <li><a href="#methods">Metodi analitici</a></li>
+          <li><a href="#profiles">Profili istituzionali</a></li>
         </ul>
       </nav>
     </div>
@@ -408,75 +343,94 @@
       <section id="about" class="panel hero-panel reveal" style="--delay: 0s;">
         <div class="hero-layout">
           <div>
-            <p class="overline">One-page dinamica · chiara e rassicurante</p>
-            <h1>Analisi del controllo nascosto nell’economia lecita</h1>
-            <p class="lead">Questa piattaforma mostra esclusivamente risultati concreti e aree di interesse: una lettura immediata, ordinata e professionale delle attività di ricerca su criminalità economica, strutture proprietarie opache, sanzioni e AML.</p>
+            <p class="overline">Research portfolio · criminal infiltration and market opacity</p>
+            <h1>Ricerca su infiltrazione criminale nell’economia legale e opacità dei mercati</h1>
+            <p class="lead">Studio come attori criminali, sanzionati e ad alto rischio entrano, usano e distorcono sistemi economici leciti tramite imprese, catene proprietarie, intermediari professionali, reti di procurement e canali finanziari che possono nascondere influenza illecita, dipendenza economica o forme dannose di controllo.</p>
             <div class="tagline-list">
-              <span class="tag">Criminologia economica</span>
-              <span class="tag">Beneficial ownership</span>
-              <span class="tag">Rischio sanzioni</span>
-              <span class="tag">AML intelligence</span>
+              <span class="tag">Infiltrazione criminale</span>
+              <span class="tag">Corporate opacity</span>
+              <span class="tag">Ownership chains</span>
+              <span class="tag">Sanctions & AML risk</span>
             </div>
           </div>
           <div class="portrait-box">
             <img class="portrait" src="/authors/admin/I7JK6AxX_400x400.jpg" alt="Ritratto di Giovanni Nicolazzo" />
-            <p class="caption">Ricercatore presso Transcrime · Università Cattolica del Sacro Cuore (Milano).</p>
+            <p class="caption">Ricercatore, Transcrime · Università Cattolica del Sacro Cuore (Milano).</p>
           </div>
         </div>
       </section>
 
       <section id="works" class="panel work-panel reveal" style="--delay: 0.08s;">
-        <h2 class="section-title">Risultati principali</h2>
-        <p class="section-subtitle">Scorri orizzontalmente per esplorare pubblicazioni e output applicativi.</p>
+        <h2 class="section-title">Pubblicazioni selezionate</h2>
+        <p class="section-subtitle">Output scientifici e applicativi rilevanti per sanctions enforcement, rischio economico e trasparenza societaria.</p>
         <div class="horizontal-track">
           <article class="card reveal" style="--delay: 0.12s;">
             <p class="card-meta">Journal article · 2026</p>
             <h3>On the enforcement of targeted sanctions: estimating the control of sanctioned Russian entities over European companies</h3>
-            <p>Metodo replicabile per stimare controllo societario e individuare indicatori operativi di elusione sanzionatoria.</p>
-            <a class="card-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener">Apri pubblicazione ↗</a>
+            <p>Proposta metodologica per stimare il controllo effettivo di soggetti sanzionati su imprese europee e individuare segnali di circumvention.</p>
+            <a class="card-link" href="https://journals.sagepub.com/doi/abs/10.1177/14773708251381914" target="_blank" rel="noopener">Apri articolo ↗</a>
           </article>
           <article class="card reveal" style="--delay: 0.15s;">
             <p class="card-meta">Journal article · 2025</p>
             <h3>Criminal participation in the legal economy during a health crisis</h3>
-            <p>Screening sul sistema economico italiano (2020–2021) per rilevare pattern compatibili con infiltrazione criminale.</p>
-            <a class="card-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">Apri pubblicazione ↗</a>
+            <p>Screening dell’economia italiana (2020–2021) per identificare pattern compatibili con partecipazione criminale nel tessuto d’impresa.</p>
+            <a class="card-link" href="https://www.sciencedirect.com/science/article/pii/S2949791425000314" target="_blank" rel="noopener">Apri articolo ↗</a>
           </article>
           <article class="card reveal" style="--delay: 0.18s;">
             <p class="card-meta">Applied report · 2025</p>
             <h3>Schemes employed to circumvent sanctions</h3>
-            <p>Mappatura di schemi ricorrenti, intermediari e veicoli societari usati per aggirare restrizioni sanzionatorie.</p>
+            <p>Mappatura di schemi ricorrenti di elusione con focus su intermediari, strutture societarie e indicatori di rischio operativo.</p>
             <a class="card-link" href="https://www.transcrime.it/en/publications/schemes-employed-to-circumvent-sanctions/" target="_blank" rel="noopener">Apri report ↗</a>
           </article>
         </div>
       </section>
 
       <section id="interests" class="panel interest-panel reveal" style="--delay: 0.1s;">
-        <h2 class="section-title">Focus di ricerca</h2>
-        <p class="section-subtitle">Ambiti su cui sviluppo analisi continuativa e metodologie applicate.</p>
+        <h2 class="section-title">Aree di studio</h2>
+        <p class="section-subtitle">Temi centrali per comprendere come il rischio opaco prende forma in strutture apparentemente lecite.</p>
         <div class="interest-list">
           <article class="interest-item reveal" style="--delay: 0.13s;">
-            <h3>Infiltrazione criminale nei mercati legali</h3>
-            <p>Studio delle dinamiche di ingresso e consolidamento di attori criminali in settori formalmente leciti.</p>
+            <h3>Infiltrazione criminale nell’economia legale</h3>
+            <p>Traiettorie di ingresso, consolidamento e distorsione competitiva nei mercati leciti.</p>
           </article>
           <article class="interest-item reveal" style="--delay: 0.16s;">
-            <h3>Strutture proprietarie opache</h3>
-            <p>Ricostruzione del controllo effettivo e analisi delle configurazioni che riducono trasparenza e accountability.</p>
+            <h3>Opacità in organizzazioni e strutture societarie</h3>
+            <p>Assetti formali che occultano influenza, dipendenze economiche o catene di controllo indirette.</p>
           </article>
           <article class="interest-item reveal" style="--delay: 0.19s;">
-            <h3>Strategie di adattamento a sanzioni e AML</h3>
-            <p>Valutazione dei comportamenti societari e transazionali adottati da soggetti ad alto rischio.</p>
+            <h3>Reti di intermediazione e canali finanziari</h3>
+            <p>Ruolo di intermediari, procurement e flussi economici nel sostenere dinamiche ad alto rischio.</p>
           </article>
         </div>
       </section>
 
-      <section id="profiles" class="panel profile-panel reveal" style="--delay: 0.12s;">
-        <h2 class="section-title">Profili ufficiali e verificabili</h2>
-        <p class="section-subtitle">Accesso diretto a fonti pubbliche per validare output, affiliazione e attività tecnica.</p>
+      <section id="methods" class="panel method-panel reveal" style="--delay: 0.12s;">
+        <h2 class="section-title">Metodi analitici</h2>
+        <p class="section-subtitle">Integrazione di teoria criminologica e metodi empirici per rendere il rischio opaco più visibile, misurabile e intelligibile.</p>
+        <div class="method-list">
+          <article class="method-item reveal" style="--delay: 0.15s;">
+            <h3>Teoria criminologica + dati strutturati</h3>
+            <p>Uso congiunto di cornici teoriche e basi dati per interpretare meccanismi di controllo non trasparente.</p>
+          </article>
+          <article class="method-item reveal" style="--delay: 0.18s;">
+            <h3>Network methods e ownership reconstruction</h3>
+            <p>Ricostruzione di relazioni societarie e catene proprietarie per stimare influenza diretta e indiretta.</p>
+          </article>
+          <article class="method-item reveal" style="--delay: 0.21s;">
+            <h3>Case-based research e risk indicator design</h3>
+            <p>Sviluppo di indicatori operativi e interpretazione caso per caso per supportare analisi di rischio applicate.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="profiles" class="panel profile-panel reveal" style="--delay: 0.14s;">
+        <h2 class="section-title">Profili istituzionali e scientifici</h2>
+        <p class="section-subtitle">Tracciabilità pubblica di pubblicazioni, identificatori di ricerca e attività tecnica.</p>
         <div class="profile-row">
-          <a class="profile-chip reveal" style="--delay: 0.15s;" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Produzione scientifica ↗</span></a>
-          <a class="profile-chip reveal" style="--delay: 0.18s;" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Identificatore autore ↗</span></a>
-          <a class="profile-chip reveal" style="--delay: 0.21s;" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Affiliazione istituzionale ↗</span></a>
-          <a class="profile-chip reveal" style="--delay: 0.24s;" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Repository e codice ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.17s;" href="https://scholar.google.com/citations?user=5zc-vxQAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Pubblicazioni e citazioni ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.2s;" href="https://orcid.org/0000-0002-5551-2682" target="_blank" rel="noopener"><strong>ORCID</strong><span>Identificatore autore ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.23s;" href="https://www.transcrime.it/en/people/giovanni-nicolazzo/" target="_blank" rel="noopener"><strong>Transcrime</strong><span>Profilo istituzionale ↗</span></a>
+          <a class="profile-chip reveal" style="--delay: 0.26s;" href="https://github.com/colazeta" target="_blank" rel="noopener"><strong>GitHub</strong><span>Repository tecnico ↗</span></a>
         </div>
       </section>
     </div>
