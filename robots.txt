@@ -1,3 +1,17 @@
 User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Training crawler policy is intentionally separate from search crawler policy.
+User-agent: GPTBot
+Disallow: /
 
 Sitemap: https://colazeta.github.io/sitemap.xml
