@@ -1,12 +1,18 @@
-# Giovanni Nicolazzo — research profile
+# Giovanni Nicolazzo — research portfolio
 
-- Primary profile page: https://colazeta.github.io/
-- Person: Giovanni Nicolazzo (Ricercatore)
-- Focus: infiltrazione criminale nell'economia legale, opacità di mercato, catene proprietarie, rischio sanzioni/AML, reti di intermediazione.
-- Methods: network methods, ownership reconstruction, case-based research, risk indicator design.
+- Canonical English profile: https://colazeta.github.io/en/
+- Italian profile: https://colazeta.github.io/it/
+- German profile: https://colazeta.github.io/de/
+- Research CV: https://colazeta.github.io/cv/
+- Person: Giovanni Nicolazzo, PhD in Criminology (2025).
+- Doctoral thesis: The Criminal Component of the Legal Economy: A Study of Patterns Based on Actors — https://publicatt.unicatt.it/handle/10807/302862
+- Research focus: criminal infiltration in the legal economy, corporate opacity, ownership structures, sanctions and anti-money laundering.
+- Current research directions: criminal infiltration beyond mafia labels; ownership, hidden control and market effects; AML capacity in public institutions.
+- Methods: structured and linked data, network and ownership reconstruction, proxy-based screening, case-based research and risk-indicator design.
 - Public profiles:
   - https://scholar.google.com/citations?user=5zc-vxQAAAAJ
   - https://orcid.org/0000-0002-5551-2682
-  - https://www.transcrime.it/en/people/giovanni-nicolazzo/
   - https://github.com/colazeta
-- Selected publication links are available on the main profile page in the "Pubblicazioni selezionate" section.
+  - https://www.linkedin.com/in/giovanni-nicolazzo
+- Contact: giovanni.nicolazzo@unicatt.it
+- Selected publications and open research projects are listed on the profile and research CV.
