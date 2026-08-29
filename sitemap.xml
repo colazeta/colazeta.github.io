@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://colazeta.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://colazeta.github.io/en/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://colazeta.github.io/it/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://colazeta.github.io/de/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://colazeta.github.io/privacy/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://colazeta.github.io/terms/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://colazeta.github.io/en/</loc><lastmod>2026-08-30</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://colazeta.github.io/it/</loc><lastmod>2026-08-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://colazeta.github.io/de/</loc><lastmod>2026-08-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://colazeta.github.io/privacy/</loc><lastmod>2026-08-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://colazeta.github.io/terms/</loc><lastmod>2026-08-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
